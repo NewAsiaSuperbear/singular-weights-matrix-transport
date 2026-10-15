@@ -92,7 +92,7 @@
       "file": "manuscript/sections/bures.tex",
       "start_line": 62,
       "end_line": 93,
-      "text_sha256": "60b118d9435dc9ea8c55f628280f66d55a89ce56aa6e08b44a0e9bea96b49461",
+      "text_sha256": "1175b3d526f10261ba5d3268f8dbfd69f5569d819b38754e607be6eb0259f3fd",
       "atom_ids": [
         "BU24",
         "BU25",
@@ -193,7 +193,7 @@
       "file": "manuscript/sections/bures.tex",
       "start_line": 198,
       "end_line": 233,
-      "text_sha256": "4cfc09f385855255306e107ffc98e03841b105482d274d29afbe3da953a4e369",
+      "text_sha256": "110a1d877f75cae820d6a4e4eb32f9a3e46e873abb2b7785380869a5e66d652b",
       "atom_ids": [
         "BU59",
         "BU60",
@@ -426,7 +426,7 @@
       "file": "manuscript/sections/examples.tex",
       "start_line": 94,
       "end_line": 156,
-      "text_sha256": "ca35d68b1c6a1ec3196b520e239dba1d69faaeaf6eae9620f7ad79a5b6a8c585",
+      "text_sha256": "db7817abc03bb1a65103c0e1fe5ebf3c2b6db42bb8a66a392800579ddfdb2c7e",
       "atom_ids": [
         "EX27",
         "EX28",
@@ -479,7 +479,7 @@
       "file": "manuscript/sections/examples.tex",
       "start_line": 158,
       "end_line": 183,
-      "text_sha256": "305a0c2f87d12cde6a5366b0c76fffb129f10735efeaa9a66c8e51dba70280b2",
+      "text_sha256": "802796dbd4bbc70217b9d681addd560288dd0ce69da57581b7ce8585b2126b5f",
       "atom_ids": [
         "EX49",
         "EX50",

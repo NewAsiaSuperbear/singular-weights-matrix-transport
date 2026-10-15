@@ -735,8 +735,8 @@
     },
     {
       "path": "manuscript/sections/bures.tex",
-      "sha256": "b65a3c49fc965ee056c966dc20f6735aedc53b18bbf1fcb2e527117171a986a0",
-      "bytes": 14480
+      "sha256": "4393081c99b32b77c342a702e8ba47fe7b140d15342c47ea5466fc76b173299f",
+      "bytes": 14502
     },
     {
       "path": "manuscript/sections/conclusion.tex",
@@ -745,8 +745,8 @@
     },
     {
       "path": "manuscript/sections/examples.tex",
-      "sha256": "0d4bba95bdec7081c5f427449b9593c34c22e22dbff14a83aeea6b1e846cb419",
-      "bytes": 11188
+      "sha256": "024978742f94b0748dea643aa834776a7cb3f33f29b49d92ab2219f5123350b0",
+      "bytes": 11210
     },
     {
       "path": "manuscript/sections/finite_weights.tex",
@@ -1195,8 +1195,8 @@
     },
     {
       "path": "paper.pdf",
-      "sha256": "b2f2035ec794837ac58f78412361062399516d7057be40857170c9e1a515f7cc",
-      "bytes": 516873
+      "sha256": "683bd7fddcb2483840e6db43bcc4f03f27490df5dfbde0b1ea08ccd6382b4c72",
+      "bytes": 517035
     },
     {
       "path": "reproducibility/README.md",
@@ -1220,7 +1220,7 @@
     },
     {
       "path": "verification/ATOM_MAP.json",
-      "sha256": "fdb438e3b133b2bdf9797211d1eaf3712e1b474195fcd4b3f4a60e09af4128dc",
+      "sha256": "15a37c2d58d6066259dcceb30c80a157d124c378b04f7538d12dafb786aab615",
       "bytes": 13714044
     },
     {
@@ -1235,7 +1235,7 @@
     },
     {
       "path": "verification/PARAGRAPH_MAP.json",
-      "sha256": "1415ac64a031f7da89e22cfa272a81b37231b31f64cfb69e51f1968378a9cb99",
+      "sha256": "702459e3cd7d89dc39ff2e723781d2e7be2b2f14e89e6cde1b69183e2d11db69",
       "bytes": 36159
     },
     {
