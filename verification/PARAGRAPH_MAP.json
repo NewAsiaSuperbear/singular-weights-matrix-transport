@@ -48,7 +48,7 @@
       "file": "manuscript/sections/bures.tex",
       "start_line": 20,
       "end_line": 26,
-      "text_sha256": "efe859a0707327dd40eac7c1b5b3ef1a135e0106ccf67cd2e373d025ebac24f9",
+      "text_sha256": "bcdf1ca8b19cda45555ca3de614ce56abda141fa65e4261f702187ab432fae99",
       "atom_ids": [
         "BU06",
         "BU07",
@@ -193,7 +193,7 @@
       "file": "manuscript/sections/bures.tex",
       "start_line": 198,
       "end_line": 233,
-      "text_sha256": "110a1d877f75cae820d6a4e4eb32f9a3e46e873abb2b7785380869a5e66d652b",
+      "text_sha256": "6e0d37145aac086d92ec0c13fc7b72212f34b624c9a1c25c4253bdf6da58997d",
       "atom_ids": [
         "BU59",
         "BU60",
@@ -1614,8 +1614,8 @@
       "id": "EXP-VERIFICATION-P001",
       "file": "manuscript/sections/verification.tex",
       "start_line": 1,
-      "end_line": 20,
-      "text_sha256": "e36585103c8fb1a8a09db83972c51dc559fcbdb3efe27cae8a986ddbb099fe54",
+      "end_line": 22,
+      "text_sha256": "1585577e611b447b83713f26162f7fd1b66c726e3c12dfccfe9e4ccd28e48733",
       "atom_ids": [
         "VE01",
         "VE02",

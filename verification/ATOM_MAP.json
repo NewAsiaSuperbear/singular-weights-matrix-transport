@@ -137310,7 +137310,7 @@
       "id": "VE01",
       "category": "nonmathematical",
       "status": "complete",
-      "claim": "The ancillary materials contain formalizations of the finite-weight, ray, uniform-divergence, hub-recovery and smooth-separation theorems explicitly listed in the manuscript.",
+      "claim": "The GitHub repository https://github.com/NewAsiaSuperbear/singular-weights-matrix-transport contains formalizations of the finite-weight, ray, uniform-divergence, hub-recovery and smooth-separation theorems explicitly listed in the manuscript.",
       "mappings": [],
       "substitutions": [],
       "assumptions": [],
@@ -137345,7 +137345,7 @@
         {
           "file": "manuscript/sections/verification.tex",
           "start_line": 2,
-          "end_line": 4
+          "end_line": 6
         }
       ]
     },
@@ -137353,7 +137353,7 @@
       "id": "VE02",
       "category": "nonmathematical",
       "status": "complete",
-      "claim": "The ancillary formalizations include the explicitly listed rotating-reaction through operator-obstruction propositions.",
+      "claim": "The GitHub repository contains formalizations of the explicitly listed rotating-reaction through operator-obstruction propositions.",
       "mappings": [],
       "substitutions": [],
       "assumptions": [],
@@ -137387,8 +137387,8 @@
       "source_locations": [
         {
           "file": "manuscript/sections/verification.tex",
-          "start_line": 5,
-          "end_line": 5
+          "start_line": 7,
+          "end_line": 7
         }
       ]
     },
@@ -137396,7 +137396,7 @@
       "id": "VE03",
       "category": "nonmathematical",
       "status": "complete",
-      "claim": "The ancillary formalizations include the supporting path constructions.",
+      "claim": "The GitHub repository contains formalizations of the supporting path constructions.",
       "mappings": [],
       "substitutions": [],
       "assumptions": [],
@@ -137430,8 +137430,8 @@
       "source_locations": [
         {
           "file": "manuscript/sections/verification.tex",
-          "start_line": 5,
-          "end_line": 6
+          "start_line": 7,
+          "end_line": 8
         }
       ]
     },
@@ -137964,8 +137964,8 @@
       "source_locations": [
         {
           "file": "manuscript/sections/verification.tex",
-          "start_line": 6,
-          "end_line": 7
+          "start_line": 8,
+          "end_line": 9
         }
       ]
     },
@@ -138007,8 +138007,8 @@
       "source_locations": [
         {
           "file": "manuscript/sections/verification.tex",
-          "start_line": 10,
-          "end_line": 12
+          "start_line": 12,
+          "end_line": 14
         }
       ]
     },
@@ -138050,8 +138050,8 @@
       "source_locations": [
         {
           "file": "manuscript/sections/verification.tex",
-          "start_line": 12,
-          "end_line": 14
+          "start_line": 14,
+          "end_line": 16
         }
       ]
     },
@@ -138093,8 +138093,8 @@
       "source_locations": [
         {
           "file": "manuscript/sections/verification.tex",
-          "start_line": 14,
-          "end_line": 15
+          "start_line": 16,
+          "end_line": 17
         }
       ]
     },
@@ -138102,7 +138102,7 @@
       "id": "VE09",
       "category": "nonmathematical",
       "status": "complete",
-      "claim": "Statement maps, exact declaration metadata and source hashes, numerical code, figure inputs, recorded outputs and reconstruction instructions accompany the article as ancillary materials.",
+      "claim": "Statement maps, exact declaration metadata and source hashes, numerical code, figure inputs, recorded results, verification materials and reconstruction instructions are available in the GitHub repository https://github.com/NewAsiaSuperbear/singular-weights-matrix-transport.",
       "mappings": [],
       "substitutions": [],
       "assumptions": [],
@@ -138130,26 +138130,26 @@
           "kind": "file",
           "file": "reproducibility/README.md",
           "sha256": "ff4226762c493f03239cf71bb0dba9c738ab20191785d8b4e1124612d751119a",
-          "description": "Contents and reconstruction scope of the accompanying ancillary source collection."
+          "description": "Contents and reproduction instructions for the GitHub source collection."
         },
         {
           "kind": "file",
           "file": "manuscript/figures/figure_source.json",
           "sha256": "1e482ab3ec7b80148240287f8436243b251acdb59d604fc03f855aa840f7d8a8",
-          "description": "Figure-source provenance and input identities supplied in the ancillary collection."
+          "description": "Figure-source provenance and input identities supplied in the GitHub repository."
         },
         {
           "kind": "file",
           "file": "numerical/validation/results/results.json",
           "sha256": "c732b17cba5697242e11cb2ea6a9a34de16cfebe0bb11793b56f59f05ec2b2f0",
-          "description": "Recorded numerical outputs included in the ancillary collection."
+          "description": "Recorded numerical outputs included in the GitHub repository."
         }
       ],
       "source_locations": [
         {
           "file": "manuscript/sections/verification.tex",
-          "start_line": 17,
-          "end_line": 20
+          "start_line": 19,
+          "end_line": 22
         }
       ]
     },
@@ -147293,7 +147293,7 @@
         {
           "file": "manuscript/sections/verification.tex",
           "start_line": 1,
-          "end_line": 20
+          "end_line": 22
         },
         {
           "file": "manuscript/sections/conclusion.tex",
@@ -175081,7 +175081,7 @@
       "id": "RVE01",
       "category": "nonmathematical",
       "status": "complete",
-      "claim": "The accompanying source inventory and verification manifests identify proof files by their hashes and specify the pinned Lean 4.34.0-rc2 toolchain and checker versions.",
+      "claim": "The repository's source inventory and verification manifests identify proof files by their hashes and specify the pinned Lean 4.34.0-rc2 toolchain and checker versions.",
       "mappings": [],
       "substitutions": [],
       "assumptions": [],
@@ -175109,8 +175109,8 @@
       "source_locations": [
         {
           "file": "manuscript/sections/verification.tex",
-          "start_line": 8,
-          "end_line": 15
+          "start_line": 10,
+          "end_line": 17
         }
       ]
     }
@@ -175122,9 +175122,9 @@
     "manuscript/sections/conclusion.tex": "7a4d9b372c7ce3883b7db9af14c5a133b305f7b4ab8e9fcb0b1653a82d382f6f",
     "manuscript/sections/finite_weights.tex": "25a36844e031898a0a9b6118f7f39f33139c7421a8721e3a842d4640ef75f69b",
     "manuscript/sections/large_weights.tex": "20dcceca0df69038100ce4ff11deb4bc2f8f78d8c6303298c8748525234db9ab",
-    "manuscript/sections/verification.tex": "e36585103c8fb1a8a09db83972c51dc559fcbdb3efe27cae8a986ddbb099fe54",
+    "manuscript/sections/verification.tex": "1585577e611b447b83713f26162f7fd1b66c726e3c12dfccfe9e4ccd28e48733",
     "manuscript/sections/setup.tex": "871f9c2f7f36c5182456c855849a985f45fa213777e8ba49113e16ff3ad36318",
-    "manuscript/sections/bures.tex": "4393081c99b32b77c342a702e8ba47fe7b140d15342c47ea5466fc76b173299f",
+    "manuscript/sections/bures.tex": "43c36bf38a2173b8fcc5799ff2c108d67f6886232c10df6317c271ac189e8000",
     "manuscript/sections/separation.tex": "fd7acb6e82c70eba2804191ef2822bfbe23f3bfccefab936a3acf35d684e3e5b",
     "manuscript/sections/examples.tex": "024978742f94b0748dea643aa834776a7cb3f33f29b49d92ab2219f5123350b0",
     "manuscript/sections/numerical.tex": "341e326342b5a3cad9dfa97d472eda6f78ea4a676c7238a458f4c1c67fd0fcb4",

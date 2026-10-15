@@ -30,8 +30,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "65fec9129dfceabfdb6e933fdfb731ce76e9584a091dbf10967dbc3e2690fb83",
-      "bytes": 3942
+      "sha256": "e3c23fb3972cb7d155ad32f7bd2eb8c55ea311074f57a412088d7552681cfc55",
+      "bytes": 4151
     },
     {
       "path": "formal/CollectManuscriptTargets.lean",
@@ -735,8 +735,8 @@
     },
     {
       "path": "manuscript/sections/bures.tex",
-      "sha256": "4393081c99b32b77c342a702e8ba47fe7b140d15342c47ea5466fc76b173299f",
-      "bytes": 14502
+      "sha256": "43c36bf38a2173b8fcc5799ff2c108d67f6886232c10df6317c271ac189e8000",
+      "bytes": 14506
     },
     {
       "path": "manuscript/sections/conclusion.tex",
@@ -785,8 +785,8 @@
     },
     {
       "path": "manuscript/sections/verification.tex",
-      "sha256": "e36585103c8fb1a8a09db83972c51dc559fcbdb3efe27cae8a986ddbb099fe54",
-      "bytes": 1197
+      "sha256": "1585577e611b447b83713f26162f7fd1b66c726e3c12dfccfe9e4ccd28e48733",
+      "bytes": 1298
     },
     {
       "path": "numerical/README.md",
@@ -1195,8 +1195,8 @@
     },
     {
       "path": "paper.pdf",
-      "sha256": "683bd7fddcb2483840e6db43bcc4f03f27490df5dfbde0b1ea08ccd6382b4c72",
-      "bytes": 517035
+      "sha256": "b1343d43caa1047bb0e86c2d11e9baa8aef498bfc011dc64cfeb5c05ebcc771a",
+      "bytes": 519175
     },
     {
       "path": "reproducibility/README.md",
@@ -1215,13 +1215,13 @@
     },
     {
       "path": "verification/ATOMIC_INVENTORY.json",
-      "sha256": "4331890a5e19127f21b57d89067134b1b8ca460d5a5b1e7c573b1071e94305f1",
-      "bytes": 311213
+      "sha256": "9cbd4b937f5676a736d3d4042de902cd4312cf91e6a75e23e060f27bde10edd3",
+      "bytes": 311395
     },
     {
       "path": "verification/ATOM_MAP.json",
-      "sha256": "15a37c2d58d6066259dcceb30c80a157d124c378b04f7538d12dafb786aab615",
-      "bytes": 13714044
+      "sha256": "07511e6f2c28fe4874e13b6b56a3cf15782f654e4cc68898b41d74d0c650a419",
+      "bytes": 13714210
     },
     {
       "path": "verification/DumpTypes.lean",
@@ -1235,7 +1235,7 @@
     },
     {
       "path": "verification/PARAGRAPH_MAP.json",
-      "sha256": "702459e3cd7d89dc39ff2e723781d2e7be2b2f14e89e6cde1b69183e2d11db69",
+      "sha256": "530bfd914846414321e3eb999812823cfc9d07b07d5abe1d1af7fb2f88a07ae7",
       "bytes": 36159
     },
     {

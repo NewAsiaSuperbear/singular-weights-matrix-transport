@@ -30,6 +30,8 @@ latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 
 The supplied [paper.pdf](paper.pdf) has 24 pages. Figure 1 appears on page 22.
 
+The arXiv source package contains only the manuscript TeX, bibliography and Figure 1 PDF. Lean sources, numerical implementations, recorded results and verification materials are provided in this repository.
+
 ## Build the Lean formalization
 
 Install [elan](https://github.com/leanprover/elan), then run:
