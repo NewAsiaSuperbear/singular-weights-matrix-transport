@@ -1,0 +1,236 @@
+\section{Rotations and limitations}\label{sec:examples}
+The following exact examples delineate the scope of the preceding limit
+theorems. Throughout this section, the planar rotation is
+\[
+ U_\theta=\begin{pmatrix}
+ \cos\theta&-\sin\theta\\
+ \sin\theta&\cos\theta
+ \end{pmatrix}.
+\]
+
+\begin{proposition}[An exactly solvable rotating reaction family]\label{prop:reactionrotation}
+Use entrywise divergence on a unit-volume domain, uniform endpoints
+$G_0=I_2\,dx$, $G_1=\diag(2,1)\,dx$, and any fixed PSD transport weight. Put
+$H_{\varepsilon,\theta}=U_\theta\diag(1,\varepsilon)U_\theta^T$,
+where $U_\theta$ is the planar rotation, $\varepsilon>0$. The singular target
+$H_* =\diag(1,0)$ has value $V_*=2(\sqrt2-1)^2$. Writing
+$p=\sin^2\theta$ and $Z=1+p+2\sqrt2\varepsilon^2+(2-p)\varepsilon^4$,
+the current value is
+\begin{equation}\label{eq:rotationformula}
+ V=2(3-p)+\frac{2(p/\varepsilon)^2}{(\sqrt{1+p}+1)^2}
+ -\frac{4[2\sqrt2+(2-p)\varepsilon^2]}{\sqrt Z+\sqrt{1+p}}.
+\end{equation}
+As $\varepsilon\to0$ and $\theta\to0$, an extended limit
+$\sin^2\theta/\varepsilon\to\ell$ implies $V\to V_*+\ell^2/2$.
+In particular $\theta=o(\sqrt\varepsilon)$ gives $V\to V_*$,
+$\theta/\sqrt\varepsilon\to a$ gives $V\to V_*+a^4/2$, and
+$|\theta|/\sqrt\varepsilon\to\infty$ gives
+$V\sim\theta^4/(2\varepsilon^2)\to\infty$.
+\end{proposition}
+\begin{proof}
+The factor construction in Lemma~\ref{lem:pure}, applied to the uniform
+endpoints, gives an admissible zero-flux path with action
+$2d_B^2(X_0,X_1)$, where $A_0=I_2$, $A_1=\diag(2,1)$ and
+$X_i=H^{-1}A_iH^{-1}$. Its space-constant
+Riccati certificates give the matching lower bound against all competitors.
+Thus this is the original minimum for any transport weight.
+
+If the eigenvalues of a two-dimensional PSD matrix $Y$ are
+$\lambda_1,\lambda_2\ge0$, then
+$(\tr\sqrt Y)^2=(\sqrt{\lambda_1}+\sqrt{\lambda_2})^2
+=\tr Y+2\sqrt{\det Y}$. In the eigenbasis of $H$, one has
+\[
+ U_\theta^TA_1U_\theta=
+ \begin{pmatrix}2-p&-\sin\theta\cos\theta\\
+ -\sin\theta\cos\theta&1+p\end{pmatrix},\qquad
+ U_\theta^TX_0U_\theta=\diag(1,\varepsilon^{-2}).
+\]
+Congruence of the first matrix by $\diag(1,\varepsilon^{-1})$ gives
+$U_\theta^TX_1U_\theta$. Taking traces and determinants yields
+\begin{align*}
+ \tr X_0+\tr X_1&=3-p+(2+p)/\varepsilon^2,\\
+ \tr(X_0^{1/2}X_1X_0^{1/2})&=2-p+(1+p)/\varepsilon^4,\\
+ \det(X_0^{1/2}X_1X_0^{1/2})&=2/\varepsilon^4.
+\end{align*}
+The square-root trace is $\sqrt Z/\varepsilon^2$, so substitution gives
+\[
+ V=2(3-p)+\frac{2}{\varepsilon^2}(2+p-2\sqrt Z).
+\]
+To expose the cancellation, first split $\sqrt Z$ at $\sqrt{1+p}$ and use
+\[
+ \sqrt Z-\sqrt{1+p}
+ =\frac{2\sqrt2\varepsilon^2+(2-p)\varepsilon^4}
+        {\sqrt Z+\sqrt{1+p}},\qquad
+ 2+p-2\sqrt{1+p}
+ =\frac{p^2}{(\sqrt{1+p}+1)^2}.
+\]
+These two identities give \eqref{eq:rotationformula}. Its first and last
+terms together tend to $6-4\sqrt2=V_*$ and remain bounded, since $p\to0$
+and both square roots in the last denominator tend to one. The middle
+term tends to $\ell^2/2$ if $p/\varepsilon\to\ell<\infty$ and is
+asymptotic to $p^2/(2\varepsilon^2)$ if that ratio diverges. In the latter
+case it dominates the bounded terms. Finally
+$\sin\theta/\theta\to1$ converts these conclusions into each of the stated
+thresholds in $\theta$.
+For the singular target the uniform density
+$M(t)=\diag((1+(\sqrt2-1)t)^2,1)$, with
+$G=M(t)\,dt\,dx$, $R=\dot M(t)\,dt\,dx$ and $q=0$, is admissible by
+integration by parts in time. Put $a=\sqrt2-1$. Its sole nonzero reaction
+entry is $2a(1+at)$ in the supported first column. To compute the cost,
+maximize first over $A$ by setting
+$A=-BLL^TB^T/2-CH_*^2C^T/2$. The zero flux makes $B=0$ optimal.
+Writing $m=(1+at)^2$ and $z=2a(1+at)$, the remaining objective is
+\[
+ zC_{11}-\tfrac12m C_{11}^2-\tfrac12C_{21}^2
+ \le\frac{z^2}{2m}=2a^2.
+\]
+Equality holds at $C_{11}=z/m$, $C_{21}=0$, with the unused second column
+set to zero. The unit-volume domain therefore gives total action $V_*$. For the lower bound, $I_2\succeq H_*^2$ and
+Lemma~\ref{lem:comparison} imply that the identity reaction weight is
+no more costly than $H_*$. The latter minimum is thus at least the
+identity-weight Bures value $V_*$. This proves equality at the singular target.
+\end{proof}
+
+\begin{proposition}[A rotating transport jump]\label{prop:transportrotation}
+In the scalar unit-disk problem with ordinary divergence and $H=1$, take
+$G_0=\delta_{(-1/2,0)}$, $G_1=\delta_{(1/2,0)}$ and
+$L_\varepsilon=U_{\sqrt\varepsilon}\diag(1,\varepsilon)U_{\sqrt\varepsilon}^T$.
+For sufficiently small $\varepsilon>0$, $V(L_\varepsilon,1)=4$, whereas
+$V(\diag(1,0),1)\le1/2$.
+\end{proposition}
+\begin{proof}
+Write $x_0=(-1/2,0)$ and $x_1=(1/2,0)$. A dual cutoff in the expensive
+direction gives the lower bound; two stationary reaction paths attain it.
+Let $u=(\sin\sqrt\varepsilon,-\cos\sqrt\varepsilon)$, the expensive unit
+eigendirection. Define the globally $C^1$ function
+\[
+ h(z)=\begin{cases}0&z\le-\pi/2,\\(1+\sin z)/2&|z|<\pi/2,\\1&z\ge\pi/2,
+ \end{cases}\qquad f(x)=h(u\cdot x/\varepsilon).
+\]
+At both breakpoints the interior derivative $\cos z/2$ vanishes, matching
+the constant pieces; hence $h$ is $C^1$. Moreover $(h')^2=h(1-h)$ on each
+piece and at the breakpoints. Since $L_\varepsilon u=\varepsilon u$,
+\[
+ |L_\varepsilon\nabla f|^2
+ =|L_\varepsilon u|^2\varepsilon^{-2}(h'(u\cdot x/\varepsilon))^2
+ =f(1-f).
+\]
+The values $u\cdot x_0=-\sin\sqrt\varepsilon/2$ and
+$u\cdot x_1=\sin\sqrt\varepsilon/2$ lie on opposite constant plateaus
+once $\sin\sqrt\varepsilon\ge\pi\varepsilon$. This holds eventually,
+because $\sin\sqrt\varepsilon/\varepsilon\to\infty$, and gives
+$f(x_0)=0$, $f(x_1)=1$.
+For $\delta>0$ set $a(t)=-2/(1+\delta-t)$, $b(t)=2/(t+\delta)$,
+$\Phi=(1-f)a+fb$. Direct differentiation gives $a'=-a^2/2$ and
+$b'=-b^2/2$. Also
+\[
+ \Phi^2=(1-f)a^2+fb^2-f(1-f)(b-a)^2,\qquad
+ |L_\varepsilon\nabla\Phi|^2=(b-a)^2f(1-f).
+\]
+Adding half of these two identities to
+$\partial_t\Phi=-((1-f)a^2+fb^2)/2$ proves
+$\partial_t\Phi+|L_\varepsilon\nabla\Phi|^2/2+\Phi^2/2=0$.
+Its endpoint pairing is $\Phi(1,x_1)-\Phi(0,x_0)=b(1)-a(0)=4/(1+\delta)$. Fenchel inequality and
+\eqref{eq:ce}, followed by $\delta\downarrow0$, give the lower bound $4$.
+The admissible zero-flux path
+$G_t=(1-t)^2\delta_{x_0}+t^2\delta_{x_1}$,
+$R_t=-2(1-t)\delta_{x_0}+2t\delta_{x_1}$ has action $4$.
+Indeed, its reaction is the time derivative of its mass, which verifies
+\eqref{eq:ce}. Using the reference measure
+$dt\otimes(\delta_{x_0}+\delta_{x_1})$, each atom with scalar mass $m>0$
+and reaction $z$ has support cost
+\[
+ \sup_c\{zc-mc^2/2\}=z^2/(2m),
+\]
+because the zero flux makes the transport dual zero optimal, the mass
+constraint is saturated, and the maximum occurs at $c=z/m$.
+Thus the cost is $[-2(1-t)]^2/[2(1-t)^2]=2$ at the first atom for $t<1$
+and $(2t)^2/(2t^2)=2$ at the second for $t>0$. At the two exceptional endpoint
+times the measures have zero mass, so integrating gives $2+2=4$.
+At the singular target, the horizontal moving unit atom of velocity $(1,0)$
+has zero reaction and action at most $1/2$. Explicitly, push $ds$ forward
+by $s\mapsto(s,(-1/2+s,0))$ to form $G$ and take $q=(1,0)G$, $R=0$.
+The chain rule and interval fundamental theorem give \eqref{eq:ce} for every
+closed-domain test. For a scalar admissible dual triple,
+$A+B_1\le-B_1^2/2+B_1\le1/2$, which proves the action bound.
+\end{proof}
+
+\begin{proposition}[Frobenius divergence does not ensure a value limit]\label{prop:norm}
+For scalar ordinary divergence on the unit disk, $H=1$, and endpoints
+$\delta_{(0,-1)}$, $\delta_{(0,1)}$, an alternating sequence
+$L_{2j}=\diag(t_{2j},1)$, $L_{2j+1}=\diag(1,t_{2j+1})$, $0<t_j\to\infty$,
+has $\norm{L_j}_F^2\to\infty$ but nonconvergent minimum values.
+\end{proposition}
+\begin{proof}
+For the even sequence $\Phi(t,x,y)=y/4-t/8$ satisfies
+$|\Phi|\le3/8$ on the time--disk cylinder and
+$L_{2j}\nabla\Phi=(0,1/4)$, so it has
+\[
+ \partial_t\Phi+\tfrac12|L_{2j}\nabla\Phi|^2+\tfrac12\Phi^2
+ \le-\tfrac18+\tfrac1{32}+\tfrac9{128}=-\tfrac3{128}.
+\]
+Its endpoint pairing is
+$\Phi(1,0,1)-\Phi(0,0,-1)=1/8+1/4=3/8$, so the even minima are at least
+$3/8$ by \eqref{eq:ce} and the support inequality.
+For the odd sequence use $\gamma(s)=(0,2s-1)$,
+$G=(s\mapsto(s,\gamma(s)))_\#ds$, $q=(0,2)G$, $R=0$.
+The trajectory lies in the interior for interior times, so the chain rule
+and interval fundamental theorem verify every original weak test.
+The support constraint gives
+$A+2B_2\le-t_{2j+1}^2B_2^2/2+2B_2\le2/t_{2j+1}^2$ eventually.
+Hence the balanced action is at most $2/t_{2j+1}^2\to0$.
+Thus the values cannot converge.
+\end{proof}
+
+\begin{proposition}[The operator survives uniformly cheap transport]\label{prop:operator}
+On the unit disk, for the Kantorovich--Bures operator
+$D^*\Phi=\operatorname{div}\Phi$,
+$n=d=2$, $k=1$, $H=I_2$, and endpoints
+$I_2\delta_{(0,-1)}$, $I_2\delta_{(0,1)}$, one has $V(tI_1,I_2)\ge1/4$
+for all $t>0$, although the total endpoint matrices coincide.
+\end{proposition}
+\begin{proof}
+Use $\Phi(s,x,y)=\diag(y/4-s/8,-s/8)$. Its row divergence is
+$(\partial_x\Phi_{11}+\partial_y\Phi_{12},
+  \partial_x\Phi_{21}+\partial_y\Phi_{22})=(0,0)$.
+Here $s\in[0,1]$ is path time. On the unit disk $|y|\le1$, hence
+$|y/4-s/8|\le3/8$ and $|s/8|\le1/8$. The diagonal entries of
+$\partial_s\Phi+\Phi^2/2$ are therefore at most
+$-1/8+9/128\le-3/128$ and $-1/8+1/128=-15/128$.
+At the terminal point $(0,1)$ the trace of $\Phi(1)$ is zero; at the
+initial point $(0,-1)$ the trace of $\Phi(0)$ is $-1/4$. The endpoint
+pairing is therefore $1/4$. Thus the dual lower bound is independent
+of the scalar transport weight. The Bures expression of the total matrices
+is zero, so the entrywise-divergence identification cannot extend to this
+operator.
+\end{proof}
+
+\begin{remark}\label{rem:nocompact}
+Unscaled flux need not be precompact even for vanishing-gap paths in the
+large-transport regime. On a unit spatial interval, let $s\in[0,1]$ denote
+path time and $\tau>0$ the transport scale. Take equal endpoints $I_2\,dx$,
+$H=I_2$, and $J=\left(\begin{smallmatrix}0&1\\-1&0\end{smallmatrix}\right)$.
+For entrywise divergence the space--time measures
+\[
+ G^{(\tau)}=I_2\,ds\,dx,\qquad
+ q^{(\tau)}=\sqrt\tau J\,ds\,dx,\qquad R^{(\tau)}=0
+\]
+have densities constant in path time. The skew matrix $J$ pairs to zero
+with every symmetric spatial derivative, so these paths satisfy all
+symmetric weak tests. Their action at weight $\tau I_2$ is
+$\norm J_F^2/(2\tau)$, while flux variation is $\sqrt\tau\norm J_F$.
+For this exact calculation, saturate the mass-dual constraint at $g=I_2$.
+With zero reaction, $C=0$ is optimal, so the support cost is
+\[
+ \sup_B\{B\cdot z-\tfrac12\tau^2\norm B_F^2\}
+ =\frac{\norm z_F^2}{2\tau^2},
+\]
+by completing the square, with equality at $B=z/\tau^2$. Inserting
+$z=\sqrt\tau J$ and integrating over the unit time--space rectangle gives
+the asserted action exactly.
+The stationary zero-flux path has action zero, so the gaps vanish as
+$\tau\to\infty$. Pairing the flux with the constant test selecting its
+$(1,2)$ entry gives $\sqrt\tau$; thus no weak-star convergent subsequence
+exists along $\tau\to\infty$. This explains why
+Theorem~\ref{thm:uniform} asserts energy convergence without flux compactness.
+\end{remark}

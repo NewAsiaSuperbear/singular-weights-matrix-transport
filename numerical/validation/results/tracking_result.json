@@ -1,0 +1,20 @@
+{
+  "engine_return_code": 0,
+  "error": null,
+  "experiment": "matrix-transport-consolidated-validation",
+  "public_provenance_export": {
+    "changed_fields": [],
+    "explanation": "Derived public export; original records remain archived privately. Machine paths, internal tracking addresses and raw Git status are omitted. Portable commands are reproduction instructions and were not executed by this export. Unverified formula-authorship wording is rendered as analytic formulas. Historical commits, dirty flags, versions, seeds, configuration, source hashes, numerical results and diagnostics are retained.",
+    "original_sha256": "aa12a23c15b995adb655ad3a1d60163f6fcc9d567c14ad925f0fb519bfd25549",
+    "portable_command_executed_by_export": false,
+    "removed_fields": [
+      "/output",
+      "/tracking_uri"
+    ],
+    "schema_version": 1
+  },
+  "run_id": "3bf9f0c90b5e4486aa19dda1339a4dfb",
+  "runtime_seconds": 41.608141835000424,
+  "status": "FINISHED",
+  "tracking_termination_recorded": true
+}

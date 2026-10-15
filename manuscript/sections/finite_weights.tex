@@ -1,0 +1,120 @@
+\section{Convergent and singular weights}
+\begin{theorem}[Simultaneous relative-Gram stability]\label{thm:finite}
+Suppose $L_j\to L_*$, $H_j\to H_*$ and $\alpha_j\to1$, where eventually
+$\alpha_j>0$ and
+\begin{equation}\label{eq:relativej}
+ L_jL_j^T\succeq\alpha_jL_*L_*^T,
+ \qquad H_jH_j^T\succeq\alpha_jH_*H_*^T.
+\end{equation}
+Then $V(L_j,H_j)\to V(L_*,H_*)$ in $[0,+\infty]$.
+If $v_*=V(L_*,H_*)<\infty$, the target minimum is attained with PSD mass.
+For any admissible sequence satisfying
+\[
+ \J_{L_j,H_j}(\mu_j)\le V(L_j,H_j)+\eta_j,
+ \qquad\eta_j\ge0,\quad\eta_j\to0,
+\]
+the actions tend to $v_*$. At finite $v_*$ it has a common weak-star
+subsequence converging to a target minimizer, every weak-star subsequence
+limit is a PSD target minimizer, and along the whole sequence
+\begin{equation}\label{eq:extinction}
+ L_*^TA=0\Rightarrow\norm{q_jA}_{\TV,F}\to0,
+ \qquad H_*^TA=0\Rightarrow\norm{R_jA}_{\TV,F}\to0.
+\end{equation}
+The action convergence also holds when $v_*=+\infty$.
+\end{theorem}
+\begin{proof}
+If $v_*<\infty$, Lemma~\ref{lem:compactness} gives a target minimizer
+$\mu_*$. For this fixed admissible path, the Gram comparison gives,
+eventually,
+\[
+ V(L_j,H_j)\le\J_{L_j,H_j}(\mu_*)
+       \le\alpha_j^{-1}v_*.
+\]
+Thus $\limsup_jV(L_j,H_j)\le v_*$.
+
+For the lower bound, suppose that
+$\ell=\liminf_jV(L_j,H_j)<\infty$. Pass to a subsequence along which
+the minima converge to $\ell$ through finite values. For each index choose
+an admissible path with action between that minimum and that minimum plus
+$1/(j+1)$; such a finite-action path exists by the definition of the infimum.
+Their actions converge to $\ell$ and are eventually bounded. Lemma~\ref{lem:compactness} gives
+a further weak-star subsequence with admissible limit $\mu$, and
+Lemma~\ref{lem:jointlsc} gives
+\[
+ v_*\le\J_{L_*,H_*}(\mu)\le\ell.
+\]
+This proves the lower bound when $v_*$ is finite. If $v_*=+\infty$,
+the same argument rules out a finite lower limit, so the minima tend to
+$+\infty$.
+
+Near-minimizer actions are squeezed between the minima and their
+vanishing-gap upper bounds. At finite $v_*$ they are eventually bounded,
+so Lemma~\ref{lem:compactness} provides a weak-star subsequence. Every
+weak-star cluster is admissible, and Lemma~\ref{lem:jointlsc} bounds its
+target action by $v_*$; hence it is a target minimizer with PSD mass.
+Finally \eqref{eq:trace} bounds the traces along the whole tail of the
+sequence. In \eqref{eq:rates}, the energy and trace factors are therefore
+bounded, while $L_j^TA\to0$ or $H_j^TA\to0$ in each forbidden target
+direction. This proves \eqref{eq:extinction} along the whole sequence.
+\end{proof}
+
+\begin{corollary}[Independent fixed eigenbases]\label{cor:bases}
+Let $U\in O(k)$ and $W\in O(n)$ be fixed, and suppose all nonnegative
+coefficients in
+\[
+ L_j=U\diag(\ell_j)U^T,\qquad H_j=W\diag(h_j)W^T
+\]
+converge to their target coefficients. Then all conclusions of
+Theorem~\ref{thm:finite} hold, without a separate comparison assumption.
+The bases may differ, and the coefficients need not be monotone.
+\end{corollary}
+\begin{proof}
+For each nonzero target coefficient $a_*$ let its error be
+$|a_j^2/a_*^2-1|$, and for zero target coefficients let its error be zero.
+Let $\delta_j$ be the sum of these errors over both weights, and set
+$\alpha_j=\max(1/2,1-\delta_j)$. Then $\alpha_j\to1$, and eventually
+$a_j^2\ge\alpha_ja_*^2$ for every coefficient. The zero target entries
+require no restriction. Orthogonal congruence gives \eqref{eq:relativej}.
+\end{proof}
+
+\begin{corollary}[Reaction zero and partial reaction]\label{cor:reaction}
+Fix $L$. If $H_j\to0$, then
+\[
+ V(L,H_j)\longrightarrow
+ b_L:=\inf\{\J_{L,I_n}(G,q,0):(G,q,0)\in\CE\}.
+\]
+This includes $b_L=+\infty$. At finite $b_L$, balanced minimizers exist,
+near-minimizer actions tend to $b_L$, every weak-star cluster is balanced
+and optimal, and $\norm{R_j}_{\TV,F}\to0$ along the entire sequence.
+More generally, if $H_j\to H_*$ and eventually
+$H_jH_j^T\succeq\alpha_jH_*H_*^T$ with $0<\alpha_j\le1$ and
+$\alpha_j\to1$, Theorem~\ref{thm:finite} holds with fixed $L$.
+The surviving reaction directions remain in the target problem.
+\end{corollary}
+\begin{proof}
+For $H_*=0$ choose $\alpha_j=1$. Finite action at zero reaction weight
+forces $R=0$: with $H=0$, the triples $(0,0,C)$ are admissible for every
+matrix $C$, so a nonzero local reaction density makes the support supremum
+infinite. For $R=0$, deleting $C$ preserves feasibility and
+leaves the support pairing unchanged, while the $C=0$ slice is independent
+of $H$. Thus the action is independent of $H$ on these paths, and the target
+infimum is exactly $b_L$.
+For partial reaction, the fixed transport Gram dominates
+$\alpha_jLL^T$. Apply Theorem~\ref{thm:finite} in both cases; use $A=I_n$
+for full reaction extinction in the zero case.
+\end{proof}
+
+\begin{corollary}[Both zero weights]\label{cor:zero}
+If $L_j\to0$ and $H_j\to0$, all conclusions of
+Theorem~\ref{thm:finite} hold with $(L_*,H_*)=(0,0)$, irrespective of
+rotating eigenbases. The same statement applies to zero transport with a
+fixed reaction weight. For a positive-definite fixed reaction weight, this
+recovers the zero-transport value and minimizer limit of
+\cite[Proposition 4.6]{LiZou}. Theorem~\ref{thm:finite} also covers singular
+reaction weights, vanishing-gap near-minimizers, and extinction in each
+null direction of the limiting weights.
+\end{corollary}
+\begin{proof}
+The zero target Grams satisfy the comparison with factor one automatically.
+For fixed reaction, its Gram comparison is equality.
+\end{proof}

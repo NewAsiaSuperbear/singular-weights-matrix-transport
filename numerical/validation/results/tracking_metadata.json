@@ -1,0 +1,60 @@
+{
+  "command": [
+    "python3",
+    "numerical/validation/experiments.py",
+    "--output",
+    "results/reproduction",
+    "--seed",
+    "921",
+    "--meshes",
+    "8",
+    "16",
+    "32",
+    "--nx",
+    "4",
+    "--profile-nt",
+    "16",
+    "--tolerance",
+    "1e-09"
+  ],
+  "configuration": {
+    "meshes": "[8, 16, 32]",
+    "profile_nt": 16,
+    "profile_nx": 4,
+    "seed": 921,
+    "solver_max_iter": 300,
+    "solver_tolerance": 1e-09
+  },
+  "engine_return_code": 0,
+  "error": null,
+  "experiment": "matrix-transport-consolidated-validation",
+  "finished_utc": "2026-10-07T10:12:36.889641+00:00",
+  "orchestration_sha256": {
+    "numerical/validation/figures.py": "4f6b5649959490bdd1a2d91e342bac07d1bb67586c0c3cf7aa34f16645279d9e",
+    "numerical/validation/track_experiment.py": "f7a807515a1c0b41c34c2e4873e4e140c9b68c141d3aeb28375d4f251da5568b"
+  },
+  "public_provenance_export": {
+    "changed_fields": [
+      "/command"
+    ],
+    "explanation": "Derived public export; original records remain archived privately. Machine paths, internal tracking addresses and raw Git status are omitted. Portable commands are reproduction instructions and were not executed by this export. Unverified formula-authorship wording is rendered as analytic formulas. Historical commits, dirty flags, versions, seeds, configuration, source hashes, numerical results and diagnostics are retained.",
+    "original_sha256": "bee4cd731c8b1dc66637b1ef5a6c77b69344286d6c194782d577c454cdcb12ec",
+    "portable_command_executed_by_export": false,
+    "removed_fields": [
+      "/configuration/numerical_python",
+      "/output",
+      "/source/status_porcelain",
+      "/tracking_uri"
+    ],
+    "schema_version": 1
+  },
+  "run_id": "3bf9f0c90b5e4486aa19dda1339a4dfb",
+  "runtime_seconds": 41.608141835000424,
+  "source": {
+    "branch": "main",
+    "commit": "c7d7f6657aaf26333329cfcd2d0232636c61df47",
+    "dirty": false,
+    "repository_detected": true
+  },
+  "status": "FINISHED"
+}

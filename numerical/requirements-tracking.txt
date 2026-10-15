@@ -1,0 +1,2 @@
+# Optional external tracking environment; solver environments do not require MLflow.
+mlflow==3.15.2

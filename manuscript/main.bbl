@@ -1,0 +1,47 @@
+\begin{thebibliography}{1}
+
+\bibitem{BhatiaJainLim}
+Rajendra Bhatia, Tanvi Jain, and Yongdo Lim.
+\newblock On the {Bures--Wasserstein} distance between positive definite
+  matrices.
+\newblock {\em Expositiones Mathematicae}, 37(2):165--191, 2019.
+
+\bibitem{BrenierVorotnikov}
+Yann Brenier and Dmitry Vorotnikov.
+\newblock On optimal transport of matrix-valued measures.
+\newblock {\em SIAM Journal on Mathematical Analysis}, 52(3):2849--2873, 2020.
+
+\bibitem{ChenGeorgiouTannenbaum}
+Yongxin Chen, Tryphon~T. Georgiou, and Allen Tannenbaum.
+\newblock Interpolation of matrices and matrix-valued densities: The unbalanced
+  case.
+\newblock {\em European Journal of Applied Mathematics}, 30(3):458--480, 2019.
+
+\bibitem{ChizatEtAl}
+L{\'e}na{\"i}c Chizat, Gabriel Peyr{\'e}, Bernhard Schmitzer, and Fran{\c
+  c}ois-Xavier Vialard.
+\newblock An interpolating distance between optimal transport and {Fisher--Rao}
+  metrics.
+\newblock {\em Foundations of Computational Mathematics}, 18(1):1--44, 2018.
+
+\bibitem{HanEtAl}
+Andi Han, Bamdev Mishra, Pratik Jawanpuria, and Junbin Gao.
+\newblock Learning with symmetric positive definite matrices via generalized
+  {Bures--Wasserstein} geometry.
+\newblock In Frank Nielsen and Fr{\'e}d{\'e}ric Barbaresco, editors, {\em
+  Geometric Science of Information}, volume 14071 of {\em Lecture Notes in
+  Computer Science}, pages 405--415, Cham, 2023. Springer.
+
+\bibitem{LiZouDiscrete}
+Bowen Li and Jun Zou.
+\newblock On the convergence of discrete dynamic unbalanced transport models.
+\newblock {\em ESAIM: Mathematical Modelling and Numerical Analysis},
+  58(3):957--992, 2024.
+
+\bibitem{LiZou}
+Bowen Li and Jun Zou.
+\newblock On a general matrix-valued unbalanced optimal transport problem.
+\newblock {\em European Journal of Applied Mathematics}, 36(6):1063--1095,
+  2025.
+
+\end{thebibliography}

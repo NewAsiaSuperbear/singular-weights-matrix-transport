@@ -1,0 +1,107 @@
+{
+  "arithmetic": "float64, with rationalized action and rationalized A22-minus-one",
+  "certification_scope": "float64 consistency checks of analytic formulas; no SDP gap or new theorem certificate",
+  "config": {
+    "epsilon_count": 29,
+    "epsilon_max": 0.1,
+    "epsilon_min": 1e-08,
+    "families": [
+      {
+        "amplitude": 1.0,
+        "exponent": 0.75,
+        "family": "power_p0.75",
+        "kind": "power"
+      },
+      {
+        "amplitude": 1.0,
+        "exponent": 0.5,
+        "family": "power_p0.5",
+        "kind": "power"
+      },
+      {
+        "amplitude": 1.0,
+        "exponent": 0.25,
+        "family": "power_p0.25",
+        "kind": "power"
+      },
+      {
+        "amplitude": 0.5,
+        "exponent": 0.5,
+        "family": "critical_a0.5",
+        "kind": "critical"
+      },
+      {
+        "amplitude": 1.0,
+        "exponent": 0.5,
+        "family": "critical_a1",
+        "kind": "critical"
+      },
+      {
+        "amplitude": 2.0,
+        "exponent": 0.5,
+        "family": "critical_a2",
+        "kind": "critical"
+      }
+    ],
+    "path_target_epsilons": [
+      0.01,
+      0.0001,
+      1e-06
+    ],
+    "time_samples": 201
+  },
+  "created_utc": "2026-10-02T18:59:28.249979+00:00",
+  "duplicate_curve_note": "power_p0.5 and critical_a1 are the same angle schedule, shown in both panels",
+  "environment": {
+    "matplotlib": "3.10.6",
+    "numpy": "2.2.6",
+    "python": "3.12.13"
+  },
+  "evaluation_runtime_seconds": 0.07752175700079533,
+  "experiment_name": "matrix-transport-partial-reaction",
+  "git": {
+    "branch": "main",
+    "commit": "3a4f652620bb8e1a3ca21af1f28971d59ccd0fe1",
+    "dirty": true
+  },
+  "method": "exact analytic closed form and explicit optimal path; no SDP optimization",
+  "metrics": {
+    "case_count": 174,
+    "max_ak_symmetry_error": 1.5700924586837752e-16,
+    "max_ce_scaled_residual": 0.0,
+    "max_constancy_relative_error": 1.965672232625059e-15,
+    "max_endpoint_scaled_residual": 7.964749822658446e-16,
+    "max_energy_relative_error": 3.552713678800501e-15,
+    "max_factor_endpoint_residual": 1.898871077077042e-15,
+    "max_independent_action_relative_error": 2.886579864025407e-15,
+    "min_ak_eigenvalue": 9.999054535747565e-17,
+    "min_mass_eigenvalue": 0.9923443972828053,
+    "saved_path_count": 18,
+    "unique_parameter_pair_count": 145
+  },
+  "project": "matrix-transport-partial-reaction",
+  "public_provenance_export": {
+    "changed_fields": [
+      "/certification_scope"
+    ],
+    "explanation": "Derived public export; original records remain archived privately. Machine paths, internal tracking addresses and raw Git status are omitted. Portable commands are reproduction instructions and were not executed by this export. Unverified formula-authorship wording is rendered as analytic formulas. Historical commits, dirty flags, versions, seeds, configuration, source hashes, numerical results and diagnostics are retained.",
+    "original_sha256": "d36bbd8755c24b986e59e1f809ef1d81ab7e8f9c7b5a25d44c3ff175c11356a4",
+    "portable_command_executed_by_export": false,
+    "removed_fields": [
+      "/git/status_porcelain"
+    ],
+    "schema_version": 1
+  },
+  "scope": "uniform I2 to diag(2,1), standard no-flux divergence, fixed PSD L",
+  "seed": 921,
+  "seed_label": "0921",
+  "seed_use": "reserved project seed; formulas and grids are deterministic",
+  "source_sha256": {
+    "numerical/__init__.py": "91ef5bd07545f2767fc01fb1351d37f18d89905a49abc021195141485967ff64",
+    "numerical/experiments.py": "58d22776883363c65ec9285964b6f275af13837ea8ab812255eb712bd5d89499",
+    "numerical/rotating_family.py": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+    "tests/test_numerical.py": "d2c95813ef3392659d3119f11e6b68229c22d68bf28c36780c5afd9d84c0e210"
+  },
+  "stochastic_sampling": false,
+  "tracking_run_id": "3e073f0168a9470cb5ae0e054862b55b"
+}

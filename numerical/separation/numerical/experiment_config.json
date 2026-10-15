@@ -1,0 +1,18 @@
+{
+  "experiment": "bowen-li-matrix-transport",
+  "run_name": "separation-quadrature-refinement-seed0921",
+  "seed_label": "0921",
+  "seed": 921,
+  "radius": 0.4,
+  "epsilon": 0.25,
+  "frequencies": [2, 3, 4, 6, 8, 12, 16, 24, 32, 48, 64],
+  "quadrature_levels": [[256, 2048], [384, 3072], [512, 4096]],
+  "test_count": 6,
+  "normalization": "Li-Zou unit-weight WB squared primal with path action (1/2) integral (q^T G^-1 q + R^T G^-1 R); original d_KB_squared = 2 B_squared",
+  "model_scope": "Concrete smooth exponential bump illustrating the same separation construction; not evaluation of Lean's noncomputable bump choice",
+  "refinement_absolute_tolerance": 1e-9,
+  "refinement_relative_tolerance": 5e-5,
+  "identity_absolute_tolerance": 1e-9,
+  "bounds_absolute_tolerance": 1e-10,
+  "quadrature_status": "Ordinary floating-point quadrature, not interval or formal certification"
+}

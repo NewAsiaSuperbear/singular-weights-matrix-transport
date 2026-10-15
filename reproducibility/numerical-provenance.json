@@ -1,0 +1,58 @@
+{
+  "derived_records": [
+    {
+      "file": "numerical/rotating-reaction/docs/numerical-data/metadata.json",
+      "original_sha256": "d36bbd8755c24b986e59e1f809ef1d81ab7e8f9c7b5a25d44c3ff175c11356a4",
+      "public_sha256": "399d55fd8676c8e3e4665f1dc8830109490297ce1bdc412a412c267146a67b58"
+    },
+    {
+      "file": "numerical/rotating-reaction/docs/numerical-data/results.json",
+      "original_sha256": "17ec2c76c7be39d353c552e9e5ac0ba65ec8b16502f33e03eb8d03ce4c52cda6",
+      "public_sha256": "edba47145d546fa02f863f0a7790992bc1d2a0d51925f2f67fad9aeb156791d3"
+    },
+    {
+      "file": "numerical/validation/results/metadata.json",
+      "original_sha256": "7c482593a0498736b6f49280a9781facd7c662704f9990b2985666149a052a19",
+      "public_sha256": "ebe46a97d1a139ec2a08ed89c281f47b45e0ef8b0281fca7c0ade06a5ca94f50"
+    },
+    {
+      "file": "numerical/validation/results/results.json",
+      "original_sha256": "2afdaca0951a52bdab03fbbaf7d03d6fb2c1f45cad51c149989163f9c593f239",
+      "public_sha256": "c732b17cba5697242e11cb2ea6a9a34de16cfebe0bb11793b56f59f05ec2b2f0"
+    },
+    {
+      "file": "numerical/validation/results/tracking_metadata.json",
+      "original_sha256": "bee4cd731c8b1dc66637b1ef5a6c77b69344286d6c194782d577c454cdcb12ec",
+      "public_sha256": "5d9c70fe96b399f400f7d3f7823e8bb19949699ac7694623662af4959811f41b"
+    },
+    {
+      "file": "numerical/validation/results/tracking_result.json",
+      "original_sha256": "aa12a23c15b995adb655ad3a1d60163f6fcc9d567c14ad925f0fb519bfd25549",
+      "public_sha256": "c5e159ee85cc8e1f8a2f85a0e59f52dc98fc82883d6cae2b46d2b506b83ceed8"
+    }
+  ],
+  "description": "Public exports of recorded numerical provenance. Original numerical payloads and immutable execution-source snapshots are preserved. Export markers in derived records describe removal of machine-specific fields.",
+  "immutable_execution_sources": {
+    "numerical/reaction-zero/docs/numerical-data/source/numerical/__init__.py": "76d0c4a28821f01f1fc51dc0cbaef5ed3909bd6f4c1b9c93858dd7472fe4ae0a",
+    "numerical/reaction-zero/docs/numerical-data/source/numerical/render_demo.py": "d3e8d3e135dfeb95393732941211c8b9179b351eddc5293a6916bac46ff10c03",
+    "numerical/reaction-zero/docs/numerical-data/source/numerical/requirements.txt": "85d4745ab58b976d20546a1e3d5b823fe414c8ab1ab523903e6a29a5886d53d5",
+    "numerical/reaction-zero/docs/numerical-data/source/numerical/run_experiments.py": "2483e5076973e48adf398401faf8fb63db5bb2ed78d496bf754a3b4c80448fb9",
+    "numerical/reaction-zero/docs/numerical-data/source/numerical/solver.py": "a49160cf4c27e4961cf1333aeb219a6154d7bdb037399ddd3b4b5e51c4ce1cca",
+    "numerical/reaction-zero/docs/numerical-data/source/numerical/track_experiment.py": "0d24a2f700b995788bf1dc695c2d70e9f408d4bc566d94bf6b27699575e38167",
+    "numerical/rotating-reaction/docs/numerical-data/source/numerical/__init__.py": "91ef5bd07545f2767fc01fb1351d37f18d89905a49abc021195141485967ff64",
+    "numerical/rotating-reaction/docs/numerical-data/source/numerical/experiments.py": "58d22776883363c65ec9285964b6f275af13837ea8ab812255eb712bd5d89499",
+    "numerical/rotating-reaction/docs/numerical-data/source/numerical/rotating_family.py": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+    "numerical/rotating-reaction/docs/numerical-data/source/tests/test_numerical.py": "d2c95813ef3392659d3119f11e6b68229c22d68bf28c36780c5afd9d84c0e210",
+    "numerical/validation/results/source/numerical/rotating-reaction/numerical/rotating_family.py": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+    "numerical/validation/results/source/numerical/validation/README.md": "0773f6838f65341cd7161a3564741bc67c592736c3a36e2d4427c50abf4b7583",
+    "numerical/validation/results/source/numerical/validation/experiments.py": "59cebda51a6bcce2fdcda59086ab36c185182c64092e916ca58e6722ceba8abe",
+    "numerical/validation/results/source/numerical/validation/figures.py": "4f6b5649959490bdd1a2d91e342bac07d1bb67586c0c3cf7aa34f16645279d9e",
+    "numerical/validation/results/source/numerical/validation/requirements.txt": "b71718826f7ba0832c48656c2b1dade13b7204482f3f4b4f51f09a080229ae1a",
+    "numerical/validation/results/source/numerical/validation/solver.py": "7af5b452e2401acaa252d564d7b27c3bf5d390acb81b1e25b620e8911f697b33",
+    "numerical/validation/results/source/numerical/validation/tests/test_experiments.py": "7c278e575ac53eb247f6d69589573555d999064f68218bde779e40276867daa0",
+    "numerical/validation/results/source/numerical/validation/tests/test_tracking.py": "187d520b3c57fdf9960ba24f1caa7c8c72d8868352f4f97c7539fb6804bace47",
+    "numerical/validation/results/source/numerical/validation/tests/test_weights.py": "4b9f9cccaa79a6b9d00fdfe818a9a64210160c0b32dc195cdac54d6e6295283c",
+    "numerical/validation/results/source/numerical/validation/track_experiment.py": "f7a807515a1c0b41c34c2e4873e4e140c9b68c141d3aeb28375d4f251da5568b"
+  },
+  "schema_version": 1
+}

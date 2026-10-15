@@ -1,0 +1,141 @@
+\section{Setup and notation}\label{sec:setup}
+Let $n,k,d$ be positive integers, let $\Omega$ be the closure of a bounded
+smooth domain in $\R^d$, and put
+$Q=[0,1]\times\Omega$. The explicit hub construction below additionally
+assumes convexity. For each size $m$, $\mathbb S^m$ is the space of real
+symmetric matrices, $\Sp^m$ its positive-semidefinite (PSD) cone, and
+$\Spp^m$ its symmetric positive-definite (SPD) cone. We write $I_m$ for
+the identity, $O(m)=\{U\in\R^{m\times m}:U^TU=I_m\}$ for the orthogonal
+group, and $X^{1/2}$ for the unique PSD square root of $X\succeq0$.
+Identity subscripts may be omitted when the size is fixed by the formula.
+The order $A\succeq B$ means $A-B\succeq0$, and $\sym A=(A+A^T)/2$.
+Every real matrix space carries the Frobenius pairing
+$\ip AB=\tr(A^TB)$ and squared norm $\norm A_F^2=\sum_{i,j}A_{ij}^2$.
+We also write $A\cdot B$ for this pairing and use it componentwise with
+matrix-valued measures, summing over all matrix entries.
+The transport dimension $k$ and matrix dimension $n$ are independent.
+
+Fix a linear first-order constant-coefficient operator
+$D^*:C^1(\Omega,\Snn)\to C(\Omega,\R^{n\times k})$ with $D^*I_n=0$.
+Its zeroth-order part is allowed. We use all closed-domain $C^1$ tests,
+with derivatives extended continuously from the interior, including tests
+without compact spatial support.
+
+The endpoints $G_0,G_1$ are finite PSD matrix-valued Radon measures.
+A path $\mu=(G,q,R)$ consists of finite signed coordinate measures on $Q$,
+with symmetric $G$, full $n\times k$ flux $q$, and full $n\times n$ reaction
+$R$. Admissibility means
+\begin{equation}\label{eq:ce}
+ \int_Q\partial_t\Phi\cdot dG+D^*\Phi\cdot dq+\Phi\cdot dR
+ =\int_\Omega\Phi(1)\cdot dG_1-\int_\Omega\Phi(0)\cdot dG_0
+ \quad(\Phi\in C^1(Q,\Snn)).
+\end{equation}
+Write $\CE_{D^*}(G_0,G_1)$ for this admissible class, and abbreviate it to
+$\CE$ when the operator and endpoints are fixed. Finite action implies
+positivity of the mass (Lemma~\ref{lem:duality}).
+When an explicit construction is given by spatial measure curves
+$(G_t,q_t,R_t)$, the associated space--time triple is
+\[
+ (G,q,R)=(dt\,G_t,dt\,q_t,dt\,R_t).
+\]
+For constructions with Lebesgue densities we write
+$G_t=M(t,\cdot)\,dx$, $q_t=F(t,\cdot)\,dx$, and
+$R_t=Z(t,\cdot)\,dx$; individual flux blocks are specified locally.
+
+For $L\in\Sp^k$ and $H\in\Sp^n$, the dual variables range over
+\[
+ (A,B,C)\in\Snn\times\R^{n\times k}\times\R^{n\times n}.
+\]
+Thus $B$ and $C$ are full matrices. Define
+\begin{equation}\label{eq:dualset}
+ \Oset_{L,H}=\{(A,B,C):
+ A+\tfrac12BLL^TB^T+\tfrac12CHH^TC^T\preceq0\}.
+\end{equation}
+The local cost is its support function,
+\[
+ j_{L,H}(g,z,r)=\sup_{(A,B,C)\in\Oset_{L,H}}
+                  (A\cdot g+B\cdot z+C\cdot r).
+\]
+Let $\rho_\mu$
+be the sum of the total variations of all coordinates of $\mu$, and let
+$(g,z,r)$ be their Radon--Nikodym densities. Set
+\begin{equation}\label{eq:action}
+ \begin{aligned}
+ \J_{L,H}(\mu)&=\int_Q j_{L,H}(g,z,r)\,d\rho_\mu,\\
+ V_{D^*}(L,H;G_0,G_1)&=
+       \inf_{\mu\in\CE_{D^*}(G_0,G_1)}\J_{L,H}(\mu).
+ \end{aligned}
+\end{equation}
+We write $V(L,H)$ with the operator and endpoints fixed. The later values
+$W(L,H)$ and $b_L$ suppress the same data; endpoint-dependent shorthand
+for fixed operators and weights will be declared in Section~\ref{sec:separation}.
+These take values in $[0,+\infty]$; the infimum of the empty finite-action
+class is $+\infty$. This is the original action normalization of
+\cite{LiZou}: $V$ is the minimum action, with a factor $1/2$ in each
+quadratic channel. In that notation, $(L,H)=(\Lambda_1,\Lambda_2)$,
+$j=J_\Lambda$, $\J=J_{\Lambda,Q}$, and $V=\mathrm{WB}_\Lambda^2$.
+For $g\in\Spp^n$, $L\in\Spp^k$, and $H\in\Spp^n$, square completion gives
+\[
+ j_{L,H}(g,z,r)
+ =\tfrac12\tr\bigl((zL^{-1})^Tg^{-1}(zL^{-1})\bigr)
+ +\tfrac12\tr\bigl((rH^{-1})^Tg^{-1}(rH^{-1})\bigr).
+\]
+Larger Gram matrices $LL^T$ and $HH^T$ lower the action: $L,H$ act as
+square-root mobilities. At singular weights the support definition
+retains every range constraint. Our normalization gives
+$E_H=2d_B^2$ for transformed pure-reaction endpoints in
+Lemma~\ref{lem:pure}, and $d_{\rm KB}^2=2V_{\rm KB}$ for the
+Kantorovich--Bures model in Section~\ref{sec:separation}.
+The support-function description and its finite-dimensional quadratic
+interpretation are due to \cite{LiZou}. Our proofs use the support function
+directly, including at singular weights. The following elementary consequences
+will also justify the reference measures and rescalings used in the constructions.
+
+\begin{lemma}[Support scaling and reference measures]\label{lem:scaling}
+For symmetric $g$ and compatible $z,r$, and for $a,c>0$, the support cost
+satisfies, in the extended nonnegative reals,
+\begin{align}
+ j_{L,H}(ag,az,ar)&=a j_{L,H}(g,z,r),\qquad j_{L,H}(0,0,0)=0,
+                                                    \label{eq:homogeneous}\\
+ j_{L,H}(g,cz,cr)&=c^2j_{L,H}(g,z,r),\qquad
+ j_{L,H}(ag,z,r)=a^{-1}j_{L,H}(g,z,r).\label{eq:quadratic-scaling}
+\end{align}
+The action in \eqref{eq:action} can be computed using any finite positive
+measure dominating all coordinate variations of $\mu$.
+\end{lemma}
+\begin{proof}
+Positive homogeneity follows directly by multiplying the linear pairing
+in a support supremum by $a>0$; at the zero argument every pairing is zero.
+The map
+$(A,B,C)\mapsto(c^2A,cB,cC)$ is a bijection of $\Oset_{L,H}$, because
+it multiplies its defining matrix inequality by $c^2$ and its inverse
+uses $1/c$. Substitution in the support supremum proves the first identity
+in \eqref{eq:quadratic-scaling}. For the second, use
+\[
+ j_{L,H}(ag,z,r)=a j_{L,H}(g,z/a,r/a)
+               =a\,a^{-2}j_{L,H}(g,z,r).
+\]
+
+Finally let $\lambda$ be such a dominating measure and
+$h=d\rho_\mu/d\lambda$. On $\{h>0\}$, the Radon--Nikodym chain rule gives
+$d\mu/d\lambda=h(d\mu/d\rho_\mu)$, while all coordinate densities vanish
+on $\{h=0\}$. Homogeneity and $j_{L,H}(0,0,0)=0$ therefore give
+\[
+ \int_Q j_{L,H}(d\mu/d\lambda)\,d\lambda
+ =\int_{\{h>0\}}h\,j_{L,H}(d\mu/d\rho_\mu)\,d\lambda
+ =\J_{L,H}(\mu).
+\]
+All integrands are nonnegative, so the equality remains valid for infinite
+action, without an integrability assumption on the cost.
+\end{proof}
+
+For any matrix channel $M$ of $\mu$, let $m=dM/d\rho_\mu$.
+For a fixed compatible rectangular matrix $A$,
+\begin{equation}\label{eq:variation}
+ \norm{MA}_{\TV,F}=\int_Q\norm{mA}_F\,d\rho_\mu.
+\end{equation}
+This is the Frobenius norm variation of the product measure. In
+particular the reaction product is $RA$, with no symmetrization. Weak-star
+convergence below means convergence of every signed coordinate against every
+continuous scalar test on the underlying compact space, $Q$ for space--time
+measures and $\Omega$ for spatial measures.

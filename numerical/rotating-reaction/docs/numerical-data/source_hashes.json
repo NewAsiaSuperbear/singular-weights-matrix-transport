@@ -1,0 +1,6 @@
+{
+  "numerical/__init__.py": "91ef5bd07545f2767fc01fb1351d37f18d89905a49abc021195141485967ff64",
+  "numerical/experiments.py": "58d22776883363c65ec9285964b6f275af13837ea8ab812255eb712bd5d89499",
+  "numerical/rotating_family.py": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+  "tests/test_numerical.py": "d2c95813ef3392659d3119f11e6b68229c22d68bf28c36780c5afd9d84c0e210"
+}

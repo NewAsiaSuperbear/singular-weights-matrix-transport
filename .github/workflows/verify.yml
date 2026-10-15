@@ -1,0 +1,108 @@
+name: Lean and Nanoda verification
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'formal/**'
+      - 'verification/**'
+      - 'manuscript/**'
+      - 'numerical/**'
+      - 'reproducibility/**'
+      - '.github/workflows/verify.yml'
+  pull_request:
+    paths:
+      - 'formal/**'
+      - 'verification/**'
+      - 'manuscript/**'
+      - 'numerical/**'
+      - 'reproducibility/**'
+      - '.github/workflows/verify.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  kernels:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - name: Check out mathematical sources
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            .github
+            verification
+            formal
+            manuscript
+            numerical
+            reproducibility
+
+      - name: Test verification guardrails
+        run: python3 -m unittest discover -s verification/tests -v
+
+      - name: Reserve disk space for complete kernel evidence
+        shell: bash
+        run: |
+          set -euo pipefail
+          df -h /
+          # These unrelated SDKs are disposable on this hosted runner.
+          # Keep Lean, Rust, Python, checked sources and verification evidence.
+          if [[ ${GITHUB_ACTIONS:-} == true && ${RUNNER_ENVIRONMENT:-} == github-hosted ]]; then
+            for unused_sdk in /usr/local/lib/android /usr/share/dotnet /opt/ghc /usr/local/.ghcup; do
+              if [[ -d "$unused_sdk" ]]; then
+                du -sh "$unused_sdk"
+                sudo rm -rf -- "$unused_sdk"
+              fi
+            done
+          fi
+          df -h /
+
+      - name: Install pinned official Lean toolchain
+        shell: bash
+        run: |
+          set -euo pipefail
+          installer_dir=$(mktemp -d)
+          curl --fail --location --retry 3 \
+            https://github.com/leanprover/elan/releases/download/v4.2.4/elan-x86_64-unknown-linux-gnu.tar.gz \
+            -o "$installer_dir/elan.tar.gz"
+          printf '%s  %s\n' 42b94d4244e8353142c456ec0e4ca6528fd898a6c604d4059f494e706e431f63 \
+            "$installer_dir/elan.tar.gz" | sha256sum --check
+          tar -xzf "$installer_dir/elan.tar.gz" -C "$installer_dir"
+          "$installer_dir/elan-init" -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+          "$HOME/.elan/bin/elan" toolchain install leanprover/lean4:v4.34.0-rc2
+          "$HOME/.elan/bin/elan" default leanprover/lean4:v4.34.0-rc2
+
+      - name: Check out pinned Lean exporter
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: leanprover/lean4export
+          ref: 483e011449cce37c3f8ad5e2aae434cbb1d2e53c
+          path: .proof-tools/exporter
+          persist-credentials: false
+
+      - name: Check out pinned Nanoda kernel
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: ammkrn/nanoda_lib
+          ref: 3a2407216ee84a75f9e1aead6803d0578be06ae7
+          path: .proof-tools/checker
+          persist-credentials: false
+
+      - name: Verify the complete selected declaration closure
+        run: bash verification/check-kernels.sh
+
+      - name: Retain kernel certificate and reproducibility evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: kernel-verification-${{ github.sha }}
+          path: |
+            .verification/*
+            !.verification/export.ndjson
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 90

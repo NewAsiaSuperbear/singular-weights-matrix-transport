@@ -1,0 +1,43 @@
+{
+  "results": "numerical/validation/results/results.json",
+  "results_sha256": "c732b17cba5697242e11cb2ea6a9a34de16cfebe0bb11793b56f59f05ec2b2f0",
+  "figure_script_sha256": "38dc730856063a5ccc96df6769134b4f9cf64233e6adfea99a7bb5152914d1f5",
+  "mlflow_run_id": "3bf9f0c90b5e4486aa19dda1339a4dfb",
+  "matplotlib_version": "3.11.0",
+  "analytic_records": 9,
+  "rotating_sdp_records": 6,
+  "large_transport_records": 3,
+  "red_crosses": "finite recorded values with failed numerical diagnostics",
+  "references": "proved-theory references, not data: panel (a) dashed V_*, V_*+1/2 and the Proposition 7.1 asymptotic reference theta^4/(2 epsilon^2); panel (c) dashed continuum upper bound 1/(3t^2) and dotted E_H=0 on the zero strip. Panel (b) has no theoretical reference: its solid and dashed lines join recorded errors of the two configurations",
+  "panel_a": "exact_action per angle_exponent facet; linear ordinate for the two bounded regimes, logarithmic for the divergent regime; theta^4/(2 epsilon^2) from recorded theta, epsilon",
+  "panel_b": "|action - exact_action| for both recorded cases on shared log-log axes, without offsets",
+  "observed_refinement_ratios": [
+    {
+      "epsilon": 0.4,
+      "theta": 0.2,
+      "nt": [
+        8,
+        16,
+        32
+      ],
+      "error_ratios": [
+        3.9988091819718443,
+        3.9994669679559887
+      ]
+    },
+    {
+      "epsilon": 0.2,
+      "theta": 0.35,
+      "nt": [
+        8,
+        16,
+        32
+      ],
+      "error_ratios": [
+        3.998150591777558,
+        4.006043517507967
+      ]
+    }
+  ],
+  "panel_c": "action and continuum_upper_bound on a logarithmic axis; recorded hub_limit E_H=0 on a separate linear zero strip below an axis break"
+}

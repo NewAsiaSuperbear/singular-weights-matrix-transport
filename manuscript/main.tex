@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=28mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools,booktabs,microtype,graphicx}
+\usepackage{placeins}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Singular weights and operator dependence in matrix-valued transport},pdfauthor={Weiyan WU}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\sym}{sym}
+\DeclareMathOperator{\Ran}{Ran}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\CE}{CE}
+\DeclareMathOperator{\TV}{TV}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Snn}{\mathbb S^n}
+\newcommand{\Sp}{\mathbb S_+}
+\newcommand{\Spp}{\mathbb S_{++}}
+\newcommand{\J}{\mathcal J}
+\newcommand{\Oset}{\mathcal O}
+\newcommand{\weak}{\overset{*}{\rightharpoonup}}
+\newcommand{\norm}[1]{\left\lVert #1\right\rVert}
+\newcommand{\ip}[2]{\left\langle #1,#2\right\rangle_F}
+\title{Singular weights and operator dependence in matrix-valued transport}
+\author{Weiyan WU}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We study several parameter limits of the matrix-valued unbalanced transport
+problem of Li and Zou. For convergent transport and reaction weights, an
+eventual relative comparison of their Gram matrices with factors tending to one gives convergence of
+extended minimum values. At finite limiting cost, the minimum is attained,
+near-minimizers admit optimal weak-star clusters, and the corresponding
+Frobenius variations vanish in the null directions of the limiting weights.
+Fixed eigenbases and vanishing reaction
+weights follow as special cases. Along fixed rays or under uniform divergence,
+large transport weights have a different limit: the reaction-channel infimum over the original finite-action class.
+For entrywise spatial divergence on a convex domain with a positive-definite
+reaction weight, the uniform-divergence limit admits a weighted Bures formula
+in terms of the total endpoint matrices and an explicit Radon-measure recovery
+bound. Rotating families and an alternating norm-divergent sequence show the
+limits of value continuity and norm-based divergence assumptions. A smooth,
+uniformly positive example also separates convergence in the full matrix-flux
+and Kantorovich--Bures models. Together, these results show that singular parameter limits can depend
+essentially on directional geometry and the transport operator, not only
+on the magnitude of the weights.
+\end{abstract}
+\input{sections/introduction}
+\input{sections/setup}
+\input{sections/tools}
+\input{sections/finite_weights}
+\input{sections/large_weights}
+\input{sections/bures}
+\input{sections/examples}
+\input{sections/separation}
+\input{sections/numerical}
+\input{sections/verification}
+\input{sections/conclusion}
+\section*{AI declaration}
+Generative AI tools contributed to the mathematical development and the organization and revision of this manuscript. The author provided initial ideas, made substantive contributions to refining the results, reviewed the arguments, and takes full responsibility for the final content.
+\bibliographystyle{plain}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,7 @@
+# Reproducible numerical example; independent of the Lean environment.
+cvxpy==1.7.2
+clarabel==0.11.1
+numpy==2.2.6
+scipy==1.18.1
+matplotlib==3.10.6
+pytest==8.4.2

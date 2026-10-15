@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "mapped_assertions": 797,
+  "mapped_mathematical_assertions": 741,
+  "paragraph_units": 79,
+  "additional_mathematical_passages": [
+    {
+      "claim": "Explicit positive-definite local quadratic cost obtained by completing the square.",
+      "location": {
+        "file": "manuscript/sections/setup.tex",
+        "start_line": 77,
+        "end_line": 82
+      },
+      "primary_citation": {
+        "key": "LiZou",
+        "locator": "https://doi.org/10.1017/s0956792524000901",
+        "statement_location": "Proposition 3.1 and the local action support/quadratic definitions"
+      },
+      "text_sha256": "a0e53b73087c62054fce0a6442682bfeb9c0afb6b6fcfc09af90f6eeb5f06d1d",
+      "id": "SPD-COST",
+      "support": "Direct mathematical derivation and the cited local action definitions.",
+      "lean_correspondence": "Documented mathematical passage outside the 741 mapped mathematical assertions."
+    },
+    {
+      "claim": "For smooth entrywise constructions, the interior density equation is partial_t M + sum_a partial_a sym F_a = sym Z; row and block divergence use the displayed coordinate conventions.",
+      "location": {
+        "file": "manuscript/sections/bures.tex",
+        "start_line": 5,
+        "end_line": 16
+      },
+      "text_sha256": "bdfd1c7decd699646982535f3015b0f8872265bf9ff86f1ca0ff35317d264aa0",
+      "id": "SMOOTH-CONTINUITY",
+      "support": "Direct mathematical derivation and the cited local action definitions.",
+      "lean_correspondence": "Documented mathematical passage outside the 741 mapped mathematical assertions."
+    },
+    {
+      "claim": "The explicit rank-one noncommuting inflation matrices give a cited inflation expression of 2 but an admissible zero-flux path of action 4-2 sqrt(2)<2; for entrywise divergence this is the exact Bures minimum.",
+      "location": {
+        "file": "manuscript/sections/bures.tex",
+        "start_line": 149,
+        "end_line": 174
+      },
+      "derivation": [
+        "e=(1,0), v=(1,1)/sqrt(2), P0=ee^T and P1=vv^T are noncommuting rank-one projections; 2 tr((P1-P0)^2)=2.",
+        "For w=v-e and u_s=e+s w, |u_s|^2=1-(2-sqrt(2))s(1-s)>0, and d_s(u_s u_s^T)=sym(2 u_s w^T).",
+        "At zero flux and H=I, saturation of the mass-dual constraint reduces the local support to sup_y(2 w dot y-|y|^2/2)=2|w|^2=4-2 sqrt(2), since C^T u_s ranges over R^2.",
+        "The time interval has length one and the spatial measure is a unit Dirac mass. The entrywise space-constant Bures certificate supplies the matching lower bound."
+      ],
+      "primary_citation": {
+        "key": "LiZou",
+        "locator": "https://doi.org/10.1017/s0956792524000901",
+        "statement_location": "Proposition 4.4, equation (4.12)"
+      },
+      "text_sha256": "d7e89749bd13d7bc4b3043aca9d6929c04503b944cabbd43f96c07855aebebe2",
+      "id": "NONCOMMUTING-INFLATION",
+      "support": "Direct mathematical derivation and the cited local action definitions.",
+      "lean_correspondence": "Documented mathematical passage outside the 741 mapped mathematical assertions."
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+\section{A smooth positive separation of two models}\label{sec:separation}
+On the two-dimensional unit disk let $n=d=2$ and compare the operators
+\[
+ D^*_{\rm KB}\Phi=\operatorname{div}\Phi,\qquad
+ D^*_{\rm full}\Phi=(\partial_1\Phi,\partial_2\Phi,
+                         S_0\Phi-\Phi S_0,S_1\Phi-\Phi S_1),
+\]
+where $S_0=\diag(1,-1)$ and
+$S_1=\begin{pmatrix}0&1\\1&0\end{pmatrix}$.
+The KB output is a $2\times1$ column, so $k=1$. The full output is the
+horizontal concatenation of four $2\times2$ blocks, so $k=8$.
+These are concrete instances of the models in \cite[Examples 7.1 and 7.3]{LiZou}.
+Their comparison is part of the question posed in
+\cite[Remark 7.1]{LiZou}; Theorem~\ref{thm:separation} gives a separation
+using smooth, uniformly positive endpoint densities.
+Their unit-weight minimum actions are
+\[
+ \begin{aligned}
+ V_{\rm KB}(G_0,G_1)&:=V_{D^*_{\rm KB}}(I_1,I_2;G_0,G_1),\\
+ V_{\rm full}(G_0,G_1)&:=V_{D^*_{\rm full}}(I_8,I_2;G_0,G_1).
+ \end{aligned}
+\]
+The original Kantorovich--Bures normalization is
+$d_{\rm KB}^2:=2V_{\rm KB}$
+\cite[Definition 2.1 and equation (2.3)]{BrenierVorotnikov}.
+On spatially constant symmetric fields, the KB operator vanishes, while
+the full operator vanishes precisely on the common commutant of $S_0,S_1$.
+
+\begin{lemma}\label{lem:generators}
+The common commutant of $S_0,S_1$ consists precisely of scalar matrices.
+\end{lemma}
+\begin{proof}
+For $A=\left(\begin{smallmatrix}a&b\\c&d\end{smallmatrix}\right)$,
+$S_0A-AS_0=\left(\begin{smallmatrix}0&2b\\-2c&0\end{smallmatrix}\right)$,
+so commutation with $S_0$ forces $b=c=0$. For such a diagonal matrix,
+$S_1A-AS_1=\left(\begin{smallmatrix}0&d-a\\a-d&0\end{smallmatrix}\right)$;
+commutation with $S_1$ therefore forces $a=d$. Conversely, scalar matrices
+commute with both generators.
+\end{proof}
+
+\begin{theorem}[Smooth uniformly positive separation]\label{thm:separation}
+There exist smooth matrix densities $G_j$ on the disk and $c>0$ such that
+\[
+ \tfrac12I_2\preceq G_j\preceq\tfrac32I_2,
+ \qquad G_j\,dx\weak I_2\,dx,
+ \qquad V_{\rm full}(I_2\,dx,G_j\,dx)\to0,
+\]
+while $c\le V_{\rm KB}(I_2\,dx,G_j\,dx)\le\pi/4$ for every $j$.
+There is no tail-uniform finite constant $C$ with
+$V_{\rm KB}(I_2\,dx,G_j\,dx)\le C V_{\rm full}(I_2\,dx,G_j\,dx)$.
+\end{theorem}
+\begin{proof}
+Here $G_j$ denotes a spatial density, and $G_j\,dx$ its endpoint measure.
+Choose $\chi\in C_c^\infty(B_{1/2})$, $0\le\chi\le1$, $\chi(0)=1$.
+Let $\kappa_j=2\pi(j+1)$, $E=\diag(0,1)$ and
+\[
+ h_j(x)=\frac{\chi(x)\sin(\kappa_jx_1)}{\kappa_j},\quad
+ f_j=\partial_1h_j,
+ \qquad G_j=I_2+\tfrac14 f_jE.
+\]
+Expanding the derivative gives
+\[
+ f_j=\chi\cos(\kappa_jx_1)
+       +\kappa_j^{-1}(\partial_1\chi)\sin(\kappa_jx_1).
+\]
+Choose a fixed integer shift so that
+$\kappa_j\ge\norm{\partial_1\chi}_\infty$ at every relabeled index.
+Then $|f_j|\le2$, and the two diagonal entries of $G_j$ lie between
+$1/2$ and $3/2$. Compact support gives $\int f_j=\int\partial_1h_j=0$
+by one-dimensional integration in $x_1$ followed by Fubini.
+
+We spell out the oscillatory limit once. For a continuous scalar test
+$\psi$, extend $a=\chi\psi$ by zero outside the disk. This is continuous
+with compact support, hence integrable. The Riemann--Lebesgue lemma gives
+the required decay; its mechanism here is a half-period translation.
+For $k>0$ set $v_k=(\pi/k)e_1$ and $I_k=\int a(x)\cos(kx_1)\,dx$.
+Translation invariance of Lebesgue measure and the sign change of the
+cosine give
+\[
+ I_k=\frac12\int\bigl(a(x)-a(x+v_k)\bigr)\cos(kx_1)\,dx.
+\]
+For large $k$ the difference is supported in a fixed compact set. Uniform
+continuity makes its supremum norm tend to zero as $v_k\to0$, and the
+integral therefore tends to zero. This proves the vanishing of the leading
+oscillatory term against every continuous test.
+The derivative term in $f_j$ tends uniformly to zero, so each coordinate
+of $G_j\,dx$ converges weak-star to the corresponding coordinate of
+$I_2\,dx$.
+
+The small antiderivative $h_j$ supplies a low-action full-model flux;
+the matrix direction $E$ also permits a KB dual field with zero row divergence.
+For the full operator use the mass density $M(s,x)=I_2+s f_j(x)E/4$, first spatial block
+$Q_1=-h_jE/4$, and every other flux and reaction block zero. Here
+$\dot M=f_jE/4=-\partial_1Q_1$. Integration by parts in time produces
+$-\int\Phi\cdot\dot M$ after the endpoint terms; integration by parts in
+space produces $-\int\Phi\cdot\partial_1Q_1$, which cancels it. The
+spatial flux is compactly supported in $B_{1/2}$, so no boundary term
+occurs, for any closed-domain test. This verifies \eqref{eq:ce}.
+For any admissible dual triple at unit weights, pairing its constraint
+with $M\succeq I_2/2$ and dropping the other nonnegative channel penalties
+gives
+\[
+ A\cdot M+B_1\cdot Q_1
+ \le-\tfrac12\tr(B_1B_1^TM)+B_1\cdot Q_1
+ \le-\tfrac14\norm{B_1}_F^2+B_1\cdot Q_1
+ \le\norm{Q_1}_F^2=\tfrac1{16}h_j^2.
+\]
+The last inequality follows by subtracting
+$\norm{B_1-2Q_1}_F^2/4$ from $\norm{Q_1}_F^2$.
+Taking the support supremum and integrating over unit time bounds its action by
+\[
+ \tfrac1{16}\int h_j^2dx
+ \le\frac{\norm\chi_{L^2}^2}{16\kappa_j^2}\to0.
+\]
+For the KB lower bound, set
+$b_j=\int\cos(\kappa_jx_1)E\cdot(G_j-I_2)dx$. Integration by parts gives
+\[
+ b_j=\tfrac14\int\cos(\kappa_jx_1)\partial_1h_j\,dx
+     =\tfrac14\int\chi\sin^2(\kappa_jx_1)dx
+ \longrightarrow\tfrac18\int\chi dx>0.
+\]
+For the second equality, integration by parts differentiates the cosine
+into $-\kappa_j\sin(\kappa_jx_1)$ and cancels the factor
+$1/\kappa_j$ in $h_j$. For the limit, use
+$\sin^2 z=(1-\cos(2z))/2$ and the preceding oscillatory argument with
+$\psi=1$. Its limit is positive because $\chi(0)=1$ and $\chi$ is
+continuous and nonnegative. Also $0\le b_j\le\pi/4$, so
+$a_j=b_j/(2\pi)$ lies in $[0,1/8]$. The KB test
+$\Phi_j(s,x)=(a_j\cos(\kappa_jx_1)-a_j^2s)E$ has row divergence zero:
+its only nonzero entry is the $(2,2)$ entry, and this entry is independent
+of $x_2$.
+Also
+\[
+ \partial_s\Phi_j+\tfrac12\Phi_j^2
+ \preceq a_j^2\bigl(-1+\tfrac12(1+a_j)^2\bigr)E\preceq0.
+\]
+Indeed, $|a_j\cos(\kappa_jx_1)-a_j^2s|\le a_j(1+a_j)$ and
+$(1+a_j)^2/2\le81/128<1$, which proves the displayed dual inequality.
+The identity $\int f_j=0$ gives $\int E\cdot G_j\,dx=\pi$, so its
+endpoint pairing is $a_jb_j-a_j^2\pi=b_j^2/(4\pi)$. If
+$b_\infty=(1/8)\int\chi>0$, a further fixed shift ensures
+$b_j\ge b_\infty/2$ for every relabeled index. Thus one may take
+$c=b_\infty^2/(16\pi)>0$ in the lower bound.
+
+For the KB upper bound put $u_j=f_j/4$ and use the zero-flux pure-reaction curve
+\[
+ M(s,x)=\diag(1,(1+s(\sqrt{1+u_j(x)}-1))^2).
+\]
+Its reaction is its time derivative, so time integration by parts verifies
+admissibility. Put $a(x)=\sqrt{1+u_j(x)}-1$. The moving diagonal entry
+$m=(1+sa)^2$ is positive, because $1+sa$ lies between $1$ and
+$\sqrt{1+u_j}\ge1/\sqrt2$, and its reaction entry is $z=2a(1+sa)$.
+As in the scalar calculation in Proposition~\ref{prop:transportrotation},
+maximizing the mass dual at zero flux leaves
+$C\cdot\dot M-\tr(CC^TM)/2$. Since $M=\diag(1,m)$ and
+$\dot M=\diag(0,z)$, this equals
+\[
+ zC_{22}-\tfrac12(C_{11}^2+C_{12}^2)
+              -\tfrac m2(C_{21}^2+C_{22}^2).
+\]
+Setting the other entries to zero and $C_{22}=z/m$ shows that its supremum
+is exactly $z^2/(2m)=2a^2$. The action is consequently
+$2\int(\sqrt{1+u_j}-1)^2dx$. For $|u_j|\le1/2$,
+\[
+ 2(\sqrt{1+u_j}-1)^2
+ \le2(1-1/\sqrt2)^2=3-2\sqrt2<\tfrac14,
+\]
+so integration over the disk gives the required upper bound $\pi/4$.
+Finally a fixed comparison with $V_{\rm full}\to0$ would force the
+positive KB lower bound to zero, a contradiction.
+\end{proof}

@@ -1,0 +1,10 @@
+{
+  "numerical/rotating-reaction/numerical/rotating_family.py": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+  "numerical/validation/README.md": "0773f6838f65341cd7161a3564741bc67c592736c3a36e2d4427c50abf4b7583",
+  "numerical/validation/experiments.py": "59cebda51a6bcce2fdcda59086ab36c185182c64092e916ca58e6722ceba8abe",
+  "numerical/validation/requirements.txt": "b71718826f7ba0832c48656c2b1dade13b7204482f3f4b4f51f09a080229ae1a",
+  "numerical/validation/solver.py": "7af5b452e2401acaa252d564d7b27c3bf5d390acb81b1e25b620e8911f697b33",
+  "numerical/validation/tests/test_experiments.py": "7c278e575ac53eb247f6d69589573555d999064f68218bde779e40276867daa0",
+  "numerical/validation/tests/test_tracking.py": "187d520b3c57fdf9960ba24f1caa7c8c72d8868352f4f97c7539fb6804bace47",
+  "numerical/validation/tests/test_weights.py": "4b9f9cccaa79a6b9d00fdfe818a9a64210160c0b32dc195cdac54d6e6295283c"
+}

@@ -1,0 +1,1312 @@
+{
+  "schema_version": 1,
+  "title": "Singular weights and operator dependence in matrix-valued transport",
+  "author": "Weiyan WU",
+  "files": [
+    {
+      "path": ".github/workflows/verify.yml",
+      "sha256": "a967af21dc61bbe44f3e51b68ca6fd497e6d03501eb07b3202d9c35da607d894",
+      "bytes": 3684
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "8a7ec213fe005bedea58d96b5eef5a64f5ccafa9205e6428bd97ef26264ff90d",
+      "bytes": 184
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "eb92c4301e2c2d110caf120d4d456001cfb8c5d47808eeccb018a3325df27a96",
+      "bytes": 455
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c44fa7792c3a0cbadf9c30ecdfdb8dc63cd65358f1ac0dd6cae76363dd9071f2",
+      "bytes": 1351
+    },
+    {
+      "path": "LICENSE-PAPER.md",
+      "sha256": "e847207627d1ae85b097d94650fea492bc760ffa3ea1c03c915931b90f42d5cd",
+      "bytes": 625
+    },
+    {
+      "path": "README.md",
+      "sha256": "65fec9129dfceabfdb6e933fdfb731ce76e9584a091dbf10967dbc3e2690fb83",
+      "bytes": 3942
+    },
+    {
+      "path": "formal/CollectManuscriptTargets.lean",
+      "sha256": "1cffac759b00c57092845bbc324942687bcb1d449e3c630f0efa835fba83d2c8",
+      "bytes": 1590
+    },
+    {
+      "path": "formal/MatrixTransport/ActionBound.lean",
+      "sha256": "3c0eee11747a65e28ace97ab671458c05a871af7132a2eaaa84c3d1bbe57c849",
+      "bytes": 2827
+    },
+    {
+      "path": "formal/MatrixTransport/AffineContinuity.lean",
+      "sha256": "037a325430ecb8ffd93f027d78b466e9cd78ce469239823165ab56b446540d0b",
+      "bytes": 18797
+    },
+    {
+      "path": "formal/MatrixTransport/AffinePath.lean",
+      "sha256": "4b69d94a3b4d06895f6cd8788bb008d19b17905e9d266e4dc37ad2a714e6ab6c",
+      "bytes": 6873
+    },
+    {
+      "path": "formal/MatrixTransport/Bump.lean",
+      "sha256": "8a29a79505476e9332c3d5b90592bd536ceeca1e2cb5a724fd36ce4660c1d510",
+      "bytes": 3357
+    },
+    {
+      "path": "formal/MatrixTransport/ClosedDomain.lean",
+      "sha256": "3ea7300c35a3d6f5611346a1d95398383928954801ae768f989ab81a10ad1633",
+      "bytes": 7783
+    },
+    {
+      "path": "formal/MatrixTransport/Comparison.lean",
+      "sha256": "39608489d5b054bd665226335179c66c6a17dc1f6518d3f30d23c7af6620e197",
+      "bytes": 1192
+    },
+    {
+      "path": "formal/MatrixTransport/Continuity.lean",
+      "sha256": "12d32714e1a1d7b0af6f9c2197391c42e4ee7b118f1fcce7a0b8e22fa93ed2df",
+      "bytes": 14698
+    },
+    {
+      "path": "formal/MatrixTransport/DensityReference.lean",
+      "sha256": "58bf53c34e5ee0fe86973d4f9ec951fad835e01a241c4d5d2cb976d58b7ae0e6",
+      "bytes": 8962
+    },
+    {
+      "path": "formal/MatrixTransport/EndpointLimits.lean",
+      "sha256": "8e71e4635870b777ded7acf76730a2e3e868a33f494c1ebb40cf02a4e956652a",
+      "bytes": 10741
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/BuresAlgebra.lean",
+      "sha256": "54bb937715f3ca51f73634388c79a909a3a4cc1a74c03f9819ee8c217ae03497",
+      "bytes": 19759
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/CanonicalSqrt.lean",
+      "sha256": "41afa84d3e73c6ed6b74f2666cd412e433782603f348b023f1e193ae19b06c97",
+      "bytes": 762
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/DualCertificate.lean",
+      "sha256": "5ae8452e26e44731114e87efff58006ba982c0749366d25b0f157e90d168d49e",
+      "bytes": 25208
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/EndpointDensity.lean",
+      "sha256": "2c92bddb5e4a4154f1908c47cbabb23e62cf9bce2d96637167c0754e2a7d2e79",
+      "bytes": 10403
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/HubRecovery.lean",
+      "sha256": "876f58503475c89b17ca7ec65f569b963189f2f8f190e161a7ae723d86f52442",
+      "bytes": 7074
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/LagrangianPiece.lean",
+      "sha256": "c7973dad1af9874ea9c88e0ee8696e76236f0ff76d36ec42f8b4f6b886431256",
+      "bytes": 25629
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/MatrixCurves.lean",
+      "sha256": "fd347826c47238b69cbb84b34bb671f4dfe26ccd232ac06af760517c01dc68c3",
+      "bytes": 4387
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/Operator.lean",
+      "sha256": "ed9098f48e739e92c1bc94b226119f44103f8fafab2eabe0105eb7e924048ee1",
+      "bytes": 4949
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/Partials.lean",
+      "sha256": "8658947fc2d2bf5187dff15bffa53bd49242d2d00829d9d9232d3b73f4122cf9",
+      "bytes": 15880
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/PathOperations.lean",
+      "sha256": "ffc367945c2c8fb0f8b6879ce18d84cb7b6971c02d828a0a1d88416cb135611a",
+      "bytes": 21874
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/PointwiseCost.lean",
+      "sha256": "e0a056f52f3bd37bef9dc0ff5694e559327dbb3bd0958517fbc4fa6cb0348edf",
+      "bytes": 7916
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/PureReaction.lean",
+      "sha256": "12ba2a57bc97f87bd4418a55a99196f81cf06114bb56f866def3cd9286419023",
+      "bytes": 3755
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/ReactionPiece.lean",
+      "sha256": "bc34d0d257d6c7b0c0c368fd5d8e9bf576d2ddcf595855341b0593ccfbbaa6f6",
+      "bytes": 17732
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/SqrtProvider.lean",
+      "sha256": "a2b46f3f9f76f586703c463d5680099733b3ff245abe2410661980a75b76b1c5",
+      "bytes": 3656
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/TimeRescaling.lean",
+      "sha256": "1cb150d78b84d93c080438d84498e4150c4d2b15a584c0d34ab9ea7131619418",
+      "bytes": 3962
+    },
+    {
+      "path": "formal/MatrixTransport/EntrywiseBures/UniformBures.lean",
+      "sha256": "61c26c685592ac1b633672f568463cf6e82494281b89e3581a4df078328e16c2",
+      "bytes": 5538
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/AffineTests.lean",
+      "sha256": "07bc2131dc7ccedc982a7c5977988fc78ca60a7769e02e73f5922f05ee6feb0a",
+      "bytes": 5635
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/AtomPaths.lean",
+      "sha256": "9ec3a9de24be37642bb4b78405492c235afecdaebb1a9044202c2c34ca6a345f",
+      "bytes": 22535
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/ChainRule.lean",
+      "sha256": "acc9d995f6f091dda3598a60b9d903533686f7f8320a337328ebe4ec83733ef1",
+      "bytes": 18461
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/Core.lean",
+      "sha256": "c0e986dcba2b196f48ad5d5bba847a50ed5de32402c58d0afb32187ee048f357",
+      "bytes": 7096
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/Jets.lean",
+      "sha256": "5bb9fde4475b42e5cd4cec054cd65a10a3fe246ddfd6eb32f02d47c4090ffe7c",
+      "bytes": 11092
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/KBObstruction.lean",
+      "sha256": "18646ea3aca6aa89c79ed17df9f3622e73bf7ad9caf133a2f8d48964d00249eb",
+      "bytes": 14113
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/NormDivergence.lean",
+      "sha256": "b6681c13b060073e446d94c7c6a235b7666b1349580a1e512545caf5fbd9457d",
+      "bytes": 13370
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/RotatingCutoff.lean",
+      "sha256": "3e8b6b62b3781e2e5733b5b69baaa57dd07ba77512d6e83c4566e9e26ae1b6d5",
+      "bytes": 13002
+    },
+    {
+      "path": "formal/MatrixTransport/Examples/RotatingTransportOriginal.lean",
+      "sha256": "464907f97987c82cc749e80cba9bee0cfe6981c27df19a321cd4eb4ac8659842",
+      "bytes": 28775
+    },
+    {
+      "path": "formal/MatrixTransport/FullLimits.lean",
+      "sha256": "eeaf725fad0b67eef31460115bd4fe8f700edd4f54f1d962955b6de47bda8741",
+      "bytes": 2592
+    },
+    {
+      "path": "formal/MatrixTransport/GeneratorAdmissibility.lean",
+      "sha256": "41dc1af594ad6686a91b8da0b60dd29ed16288f5404f30056fb6ddf6c2c13cc7",
+      "bytes": 1608
+    },
+    {
+      "path": "formal/MatrixTransport/HighFrequency.lean",
+      "sha256": "9cf351bb9b3191d1dd31e0925ed0c19ef8ab1cef4904457da87b73729c6099a2",
+      "bytes": 5342
+    },
+    {
+      "path": "formal/MatrixTransport/KBCertificate.lean",
+      "sha256": "6cead50bb20533d2dffaeb641b252043aad624d4d0c556f00aeca301082eb2b6",
+      "bytes": 8643
+    },
+    {
+      "path": "formal/MatrixTransport/KBLimits.lean",
+      "sha256": "0d8cc3492b09721b7746aa070d02c49ef861271801405d02363758f03ea0636d",
+      "bytes": 3565
+    },
+    {
+      "path": "formal/MatrixTransport/MatrixAction.lean",
+      "sha256": "d1dd7b983633455f3ee45c361f976db5fc694c36189fc982ff4dad03490af2c9",
+      "bytes": 4628
+    },
+    {
+      "path": "formal/MatrixTransport/MatrixBasics.lean",
+      "sha256": "8e4f0b1669d947cb8be0580bce43a69203ecb627a7939e835ccc19eb4649bc79",
+      "bytes": 8128
+    },
+    {
+      "path": "formal/MatrixTransport/MeasureRepresentation.lean",
+      "sha256": "9937092ff91908e3496afba8bc79c9059ef55cf5b890eea289ed7180d6742a2b",
+      "bytes": 5260
+    },
+    {
+      "path": "formal/MatrixTransport/Oscillation.lean",
+      "sha256": "ca46fab31e3adf9dc3768f343440bb60321ebbf437db2a29724cf913e6e384fe",
+      "bytes": 9084
+    },
+    {
+      "path": "formal/MatrixTransport/Pairing.lean",
+      "sha256": "da9309533fe9cbac6bf35267b6ccfef70837e56b73f01a74502640cf650aa99d",
+      "bytes": 7336
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/AnalyticFigureReferences.lean",
+      "sha256": "7f8f70ecf16db17f74b63ea105ecc7796a093c8b93fcf57b7b4075eedad8535e",
+      "bytes": 6789
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/BoundaryTime.lean",
+      "sha256": "7ee3ba4ec267d7c695ecac43836d62e51f15780d7364098d318cd9906b4bcded",
+      "bytes": 7363
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExampleAtomBridges.lean",
+      "sha256": "827b178f4f06ceb8dff931f1e9ec636af34370a8e78e9b7a4679dc0ddfc2bb2d",
+      "bytes": 11143
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExampleBridges.lean",
+      "sha256": "93538a7c6b03aed8b39d6c52d12b8a6b2fe1953a3ac5094f40cc0d83b830a100",
+      "bytes": 18516
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExampleFluxBridges.lean",
+      "sha256": "28829a8215023b61cfee97266f8483bacb97f778b2aab1e24249c5ed4edc37e7",
+      "bytes": 3854
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExpandedDiscreteModel.lean",
+      "sha256": "e4fcb7661254ea868362dafc5a68b8f489c40fa8c4527ce82ea2dc1f49112f6f",
+      "bytes": 2192
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExpandedGluing.lean",
+      "sha256": "c95ce7ac7f8b7653f3cbfb3c9b53d67d52296c7bf1b63c8c5f7ea74563bb5aa4",
+      "bytes": 6413
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExpandedHubGluing.lean",
+      "sha256": "3acf1584459be0d7e2043c73bead7bd5a158cd4eb5304cfde7b30d295306817d",
+      "bytes": 9469
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExpandedScalarExamples.lean",
+      "sha256": "66854d4fc5bfea79f5920f8e3d6a10685554444fa31e970b5ea9a66f8d62c083",
+      "bytes": 21369
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExpandedSeparation.lean",
+      "sha256": "3ed495846eca5e8c78c0b5327af64edcc62ad13a747d0cb54201c547d01fa425",
+      "bytes": 8132
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExpandedSlabGluing.lean",
+      "sha256": "9ede33e57ca7211be2ed53f5977e8a3d552b3d56c4feb9788275d0689a2def5b",
+      "bytes": 4649
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExpandedSupport.lean",
+      "sha256": "e8f86b9c68672f40c73f9b18715d71b41b7b33259ce4d894789b127e07e9689c",
+      "bytes": 10212
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/ExpandedTimeSupport.lean",
+      "sha256": "a7c0c4b79e3ad8ebfaa808b3acfdba87a09a3df8642dce6d65d9cc63fd12e61c",
+      "bytes": 7865
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/FactorUpper.lean",
+      "sha256": "7d65844920fb49a3c6104b6bd3730d56cd82a929b59b84080bfe65b9d3c586ca",
+      "bytes": 3820
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/FluxNoncompactness.lean",
+      "sha256": "5174f6a42faa30fe4f44c5bc128aeb0b63a53e0a357a79819e9e6bfb82a60e5e",
+      "bytes": 21331
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/FrobeniusSuprema.lean",
+      "sha256": "4372f2799f89a1a9be0f7d85531d548e2905b2de183df5140b6a10f089495f15",
+      "bytes": 1187
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/FrobeniusVariation.lean",
+      "sha256": "0e8b868fb91a2328d53237332e7df2b225f2a84e17a33a551f722dfa7f6ceb1b",
+      "bytes": 8739
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/GeneralUniformReaction.lean",
+      "sha256": "0cc9a018dba88bd00da242ea8a8ead6e40c6ccbee1442b95ef99b7a84db191c6",
+      "bytes": 25618
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/GenericBridges.lean",
+      "sha256": "e0f12fcdd32228cd378ca919d69f0b6ec455f3ac6db75f4c4bda41b6e7c46c3c",
+      "bytes": 16771
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/HamiltonJacobi.lean",
+      "sha256": "e969c9878d14f84d24fc2aa5962e090c2531ef5508807a3b0803b38656e1c701",
+      "bytes": 2129
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/HubLimit.lean",
+      "sha256": "a8dbe3026f2ae8b7a226325c97350da23c0b0eb8314c87ab3272502809193240",
+      "bytes": 7640
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/HubOptimization.lean",
+      "sha256": "a1c14721fff0bbfe8bca878a7005ec479220c447b63d62eb5092119582ed2b4a",
+      "bytes": 5852
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/HubScalarExact.lean",
+      "sha256": "6cccacbdc7001f314dd10a4e55c98fb65cf1d4c8bae37a3ac9b6110bf588cd25",
+      "bytes": 12356
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/InfimumProofBridges.lean",
+      "sha256": "0f699e2cba609f74b7e4945375526fa56c7fb6410337c5ccffd520772eded05f",
+      "bytes": 5015
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/KBVariableAmplitude.lean",
+      "sha256": "cb95be4a0f46cf76941c00c5af06a85731f0ce2c7d70d6b004f654b9431b92f1",
+      "bytes": 9946
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/NativeSeparation.lean",
+      "sha256": "49a62a7573d82b155e059edabaf0e1521c94a685cb30034906473283559fa701",
+      "bytes": 7249
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/NativeSeparationRegime.lean",
+      "sha256": "ae07194df6b2545e60cbfd5d3f08f9913d2f841885ae709a5856d912886f8f69",
+      "bytes": 26643
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/NativeSeparationSharp.lean",
+      "sha256": "7bc149ec25d10870fd065ad8017b38b86a53c484924e0600c0820a0bad17b7c7",
+      "bytes": 6172
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/NativeSeparationSpace.lean",
+      "sha256": "040a28067236a5dc5a68d89a43be50257c13d4fe2efbe9589e95d27a660fcef5",
+      "bytes": 12410
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/NativeSeparationSqrt.lean",
+      "sha256": "de49a375792409fc603398659c9f73f47138f3b1688511f3eb3b1767a01fae22",
+      "bytes": 22138
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/NativeSeparationTime.lean",
+      "sha256": "07221ff34d5eb86ad370993184f889dd1d33477c0f46ebdcf0c95ac7b3b8e917",
+      "bytes": 6699
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/NumericalProfileReferences.lean",
+      "sha256": "6d0974721f9014d4124f2970ff74e03e68dab6db0f59161fce8aca4c964b8b56",
+      "bytes": 16101
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/PathScaling.lean",
+      "sha256": "fb0ea8cd252a37b46ef691291f39861052acd67e62ff38d78991ff2f736a3680",
+      "bytes": 18707
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/Pushforward.lean",
+      "sha256": "d9bdc8d9858c122c2eee9bff892f9d8420cb04aa00d806c2ef6c65361e9eb1d2",
+      "bytes": 2541
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/RotatingReactionAlgebra.lean",
+      "sha256": "ca3c36f843426ed18d6673495ddbb33ac34d0b407a2a2677de34b31ef8b5b0ff",
+      "bytes": 20955
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/RotatingReactionLimits.lean",
+      "sha256": "708a62357a341db5fda5975e88b2cd40b66a0465529abab89f7020038004877a",
+      "bytes": 12793
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/RotatingReactionValue.lean",
+      "sha256": "22eb6f81b0821d1527a96b71be3db3c31e3bd47a09503b6a2abf82041324e9f0",
+      "bytes": 9046
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/RotationFilters.lean",
+      "sha256": "506cde0c4b3dd4af44cc96c3d43ca9ee6332d072471028431c4d124d4a0260c1",
+      "bytes": 12420
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/SeparationPaperRoute.lean",
+      "sha256": "a34c9eedfdc56b9e5cdb4bc760b2cea77aaa70f4872c4127a9f1bf9f1469e22b",
+      "bytes": 5636
+    },
+    {
+      "path": "formal/MatrixTransport/Paper/UniformReactionProblem.lean",
+      "sha256": "be7f3e2575c10e67daec3a73effb26a01f1935d13074dcd127d3c60f4524d838",
+      "bytes": 3607
+    },
+    {
+      "path": "formal/MatrixTransport/Paper.lean",
+      "sha256": "012d9c7e7eb49da2cd41002e9a97b53a0125e1247c52377b580b2706034a562a",
+      "bytes": 6073
+    },
+    {
+      "path": "formal/MatrixTransport/PartialReaction/Compactness.lean",
+      "sha256": "9777bb5a9e47c3a9e2ba06ed47fd9178e9ab09eb45d0451471de76e2a16e4259",
+      "bytes": 6261
+    },
+    {
+      "path": "formal/MatrixTransport/PartialReaction/DirectionalReaction.lean",
+      "sha256": "564cde2e58acf0649ae11eb72f7e487a4a80aa1ffe9dc25d2d6cf68605862a98",
+      "bytes": 14845
+    },
+    {
+      "path": "formal/MatrixTransport/PartialReaction/JointLowerSemicontinuity.lean",
+      "sha256": "5a2d553f33371b6f548107ce5466be2b62cc399c1b88188d66124f35a5f58038",
+      "bytes": 14911
+    },
+    {
+      "path": "formal/MatrixTransport/PartialReaction/KernelExtinction.lean",
+      "sha256": "f03cf5de83d3042bfc7c0034da40a914e8e33734de0963cffda709f420b05429",
+      "bytes": 9639
+    },
+    {
+      "path": "formal/MatrixTransport/PartialReaction/LimitTheorem.lean",
+      "sha256": "49e9fc5124f008bc31ba4bdd2c0a3df03915012ef310884fa4cc5a99a261df35",
+      "bytes": 6147
+    },
+    {
+      "path": "formal/MatrixTransport/PartialReaction/Regime.lean",
+      "sha256": "50aca260687e209403495e84871dc6b36639fddf00846f1977d8972aef728a8f",
+      "bytes": 4879
+    },
+    {
+      "path": "formal/MatrixTransport/PartialReaction/RelativeLimit.lean",
+      "sha256": "58b5ab9acecbac511730fc284af68330aaa8529ffe2e45f5c803cdcc578557c7",
+      "bytes": 7484
+    },
+    {
+      "path": "formal/MatrixTransport/PartialReaction/WeightScaling.lean",
+      "sha256": "06484ffa20288b95aea87554776f447f81e60e820de0b1becd152986b72c3814",
+      "bytes": 6355
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/Compactness.lean",
+      "sha256": "3d527d9b27d52c49339c80a482b27719403e41f17e2c2f1816c47d8f16223407",
+      "bytes": 7221
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/FixedBasis.lean",
+      "sha256": "b410db2d60c41c0c613b50c2c0d901c4f0ea46644e11517fbdf0d2e67e672684",
+      "bytes": 16440
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/FrobeniusRates.lean",
+      "sha256": "343f8237d10d62e8320ae3941a4cf0dd67b26601571b77fc160d8af1334e1fd2",
+      "bytes": 15828
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/JointWeights.lean",
+      "sha256": "97b1c563b2f7d63cd9ffd5d7d3243fa6acf40c3ccbd57dba412e568df6491e82",
+      "bytes": 9240
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/KernelExtinction.lean",
+      "sha256": "bdd561a1d151e785bde5f394f8f54882bfa3f706edf0831a582ef351b876619f",
+      "bytes": 21286
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/LimitTheorem.lean",
+      "sha256": "5a8c26111cdecd2729c957b7b874416745bc54ee772b09f32b4a7376d76a1252",
+      "bytes": 7839
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/Regime.lean",
+      "sha256": "973a68337f5ec68579873547b6f6960318bbbf511c25d465b1432b1b3202cc0f",
+      "bytes": 11376
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/WeightComparison.lean",
+      "sha256": "ff5fccf6708b8ccf0fb9e9056128f3798f3cb6252aa10009dd02bbee32dd2e87",
+      "bytes": 5299
+    },
+    {
+      "path": "formal/MatrixTransport/PartialWeights/ZeroWeights.lean",
+      "sha256": "caba52499741e1fa771d405a6afe4465e27b639f58f9533a3626dabe0d3c8b03",
+      "bytes": 2988
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionPath.lean",
+      "sha256": "76f6f23be9ea9c1506a594157d25d70362dec15554ca08eb35a6cb358dc76f85",
+      "bytes": 15509
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/ClosedDomainTests.lean",
+      "sha256": "4fcf3216f2929ef43eb471d1d7d86a3858b65a2768a03c0ae4495720c01940b9",
+      "bytes": 23690
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/Coercivity.lean",
+      "sha256": "ea5dd6490de727454aca205bff1dd81a59ffcf18657ae320033a05ae4ac1a892",
+      "bytes": 3147
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/ContinuityEquation.lean",
+      "sha256": "8fd9059aaa5f094aba4f9752aff738ba97be20fe469ee382383842534429fe3c",
+      "bytes": 3067
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/ContinuousSelectorApproximation.lean",
+      "sha256": "3eed3e58ae233c0a38b677175dc4334b127e545ee347fe7bd9f183b62a0d6336",
+      "bytes": 21772
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/DualRepresentation.lean",
+      "sha256": "25044817ba4e91a6691c9d657b54d9cbcedce0f64768460e240306c0cba8bf98",
+      "bytes": 13639
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/LimitTheorem.lean",
+      "sha256": "af2f1525c33b9eaae3793dfb39cd9900450709bd97baa0b8e0463fcf6f63a05b",
+      "bytes": 32074
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/LocalEstimates.lean",
+      "sha256": "b5e5f61a4a3be5fcc3a07157ea37239040a2fc95359dbe3987b70e90709dc964",
+      "bytes": 9667
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/MassScaling.lean",
+      "sha256": "ba06e88343932952cc2ff175b944aa7441a1a204e5e3842668690cbdd37bb0f3",
+      "bytes": 10001
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/MatrixBounds.lean",
+      "sha256": "3d235f745ba3d8fb63e6cb1743ba6a4891c487045e1cd69e78018291d6149b25",
+      "bytes": 2902
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/MatrixPositivity.lean",
+      "sha256": "2265647a3af1c4bb727dfc1bbb00706fdd732a0ae4e01de970ac7d046e61a7c5",
+      "bytes": 5275
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/MatrixSymmetry.lean",
+      "sha256": "a11e2c1701b4906977c3dfe741794c616668cfd54ba388e58ee4e011a3f35bde",
+      "bytes": 4579
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/MatrixVariation.lean",
+      "sha256": "5c5d24b346fbc27d11339ef64fa1203a19f2ffc722343f520fddaf37a19e575b",
+      "bytes": 4187
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/MeasureCompactness.lean",
+      "sha256": "a4c990181303ad31b40f70d4f4dc8034fa080e98528b4d7b4296ad4701926a17",
+      "bytes": 9063
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/MinimumLimit.lean",
+      "sha256": "68f125cdc22a99b5b0539ad9b6fae699834dc678e7dcb45e1bcf5846bbea1d0b",
+      "bytes": 4078
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/PathCoercivity.lean",
+      "sha256": "e8ac6e8fb3d0a6086f3da590ab5f22d314f92d32886cfe190e3a5c670b7c4a8b",
+      "bytes": 30823
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/PointwiseBounds.lean",
+      "sha256": "ae447178b269e49a87536eaca61f133893766f9745e02f30eccbc63fd5b6d3a3",
+      "bytes": 11435
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/WeightedAction.lean",
+      "sha256": "f9600bbdbb526c3f54325977663f09700a2ee6791b792d06a3f2ebb0e744570f",
+      "bytes": 13477
+    },
+    {
+      "path": "formal/MatrixTransport/ReactionZero/WeightedSet.lean",
+      "sha256": "ffec048ac7694b733bfff906295704b555a8b694a10a3f1d81acca5a66f8f147",
+      "bytes": 7842
+    },
+    {
+      "path": "formal/MatrixTransport/Separation.lean",
+      "sha256": "cda271b04b7a0bfc6fd992ef94a277319c43394d38b2cad993e35eaf56f389b5",
+      "bytes": 3019
+    },
+    {
+      "path": "formal/MatrixTransport/SpatialTest.lean",
+      "sha256": "bf84b0f73b5fe547f3511885d62822e8e02943524467883d78f723c2d29622cc",
+      "bytes": 7536
+    },
+    {
+      "path": "formal/MatrixTransport/SupportFunction.lean",
+      "sha256": "8dca042c1dbf3034a6c81854bc3e220e73d5114ae80ec395e9518d516be599cd",
+      "bytes": 2787
+    },
+    {
+      "path": "formal/MatrixTransport/TimeTest.lean",
+      "sha256": "bf8a3216b45ed8f3757d450a5089447856ee1bfc0d2fbb787863526c19a196f8",
+      "bytes": 7479
+    },
+    {
+      "path": "formal/MatrixTransport/TransportInfinity/FluxScaling.lean",
+      "sha256": "05660278d05d8a8cdbdc41723596276faa12916ee5d887945ebecb9d2912573b",
+      "bytes": 18486
+    },
+    {
+      "path": "formal/MatrixTransport/TransportInfinity/LimitTheorem.lean",
+      "sha256": "870e2bb7dff4543626e1c75a4bd0fcc4949fc13613579ce4f10c43ba51fdad38",
+      "bytes": 4949
+    },
+    {
+      "path": "formal/MatrixTransport/TransportInfinity/MinimumLimit.lean",
+      "sha256": "67f605cf90014e46690c1739dba4a9a8462597fd00c5e2736d0221ef32e97b32",
+      "bytes": 2634
+    },
+    {
+      "path": "formal/MatrixTransport/TransportInfinity/UniformLimit.lean",
+      "sha256": "840f3fa61f10d663fd85d021f3d6176d6bd57ed5025ee1e8cebf19f5448296fe",
+      "bytes": 9684
+    },
+    {
+      "path": "formal/MatrixTransport/WeakStar.lean",
+      "sha256": "1e806a84924024ebda4ef58dde3318a7f7e3009c00f336333e6699c4829661b9",
+      "bytes": 8659
+    },
+    {
+      "path": "formal/MatrixTransport.lean",
+      "sha256": "5448b87a9152613972ea5ccb4de9bab66ba7299c907512d15059fff4837f1ccb",
+      "bytes": 457
+    },
+    {
+      "path": "formal/lake-manifest.json",
+      "sha256": "4d231a2112b8a8a8f5b8d5314b552be46d43184527f8f929d3d3c54490896522",
+      "bytes": 3549
+    },
+    {
+      "path": "formal/lakefile.lean",
+      "sha256": "b13b99fa382fbe2da45efb63d22683a9e8403ce8866206bc99f08ac5571979f0",
+      "bytes": 274
+    },
+    {
+      "path": "formal/lean-toolchain",
+      "sha256": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+      "bytes": 29
+    },
+    {
+      "path": "manuscript/figures/figure_source.json",
+      "sha256": "1e482ab3ec7b80148240287f8436243b251acdb59d604fc03f855aa840f7d8a8",
+      "bytes": 1723
+    },
+    {
+      "path": "manuscript/figures/theory_comparisons.pdf",
+      "sha256": "ba76166d4c19b04cd06450451cc6e4c76059e4482755ac6dcb0232755d48bdbc",
+      "bytes": 58422
+    },
+    {
+      "path": "manuscript/main.bbl",
+      "sha256": "04aa2f14a7dc0ecb5b4ab011c1e54aa238c2d5a32f9af7e07849498e880ea030",
+      "bytes": 1831
+    },
+    {
+      "path": "manuscript/main.tex",
+      "sha256": "b40fc0d697be920e85286607694b1213e3507a98582d9858231c756f5533b639",
+      "bytes": 3375
+    },
+    {
+      "path": "manuscript/references.bib",
+      "sha256": "5d2cf0f9f7009e2d1bac8f763d48cfdc3a437cf09182f8c4704a666e4ea7c21f",
+      "bytes": 2633
+    },
+    {
+      "path": "manuscript/sections/bures.tex",
+      "sha256": "b65a3c49fc965ee056c966dc20f6735aedc53b18bbf1fcb2e527117171a986a0",
+      "bytes": 14480
+    },
+    {
+      "path": "manuscript/sections/conclusion.tex",
+      "sha256": "7a4d9b372c7ce3883b7db9af14c5a133b305f7b4ab8e9fcb0b1653a82d382f6f",
+      "bytes": 1490
+    },
+    {
+      "path": "manuscript/sections/examples.tex",
+      "sha256": "0d4bba95bdec7081c5f427449b9593c34c22e22dbff14a83aeea6b1e846cb419",
+      "bytes": 11188
+    },
+    {
+      "path": "manuscript/sections/finite_weights.tex",
+      "sha256": "25a36844e031898a0a9b6118f7f39f33139c7421a8721e3a842d4640ef75f69b",
+      "bytes": 5540
+    },
+    {
+      "path": "manuscript/sections/introduction.tex",
+      "sha256": "995938640ec8b29369ee371b8eb892aa96e47a0a720fed73fc4b3a0c38b20b94",
+      "bytes": 3122
+    },
+    {
+      "path": "manuscript/sections/large_weights.tex",
+      "sha256": "20dcceca0df69038100ce4ff11deb4bc2f8f78d8c6303298c8748525234db9ab",
+      "bytes": 4929
+    },
+    {
+      "path": "manuscript/sections/numerical.tex",
+      "sha256": "341e326342b5a3cad9dfa97d472eda6f78ea4a676c7238a458f4c1c67fd0fcb4",
+      "bytes": 4918
+    },
+    {
+      "path": "manuscript/sections/separation.tex",
+      "sha256": "fd7acb6e82c70eba2804191ef2822bfbe23f3bfccefab936a3acf35d684e3e5b",
+      "bytes": 7593
+    },
+    {
+      "path": "manuscript/sections/setup.tex",
+      "sha256": "871f9c2f7f36c5182456c855849a985f45fa213777e8ba49113e16ff3ad36318",
+      "bytes": 6744
+    },
+    {
+      "path": "manuscript/sections/tools.tex",
+      "sha256": "f49f3363ecccdbd9e4ff32b5dfc4ed8b552f23f2084dc5683dee67675dc113ca",
+      "bytes": 16950
+    },
+    {
+      "path": "manuscript/sections/verification.tex",
+      "sha256": "e36585103c8fb1a8a09db83972c51dc559fcbdb3efe27cae8a986ddbb099fe54",
+      "bytes": 1197
+    },
+    {
+      "path": "numerical/README.md",
+      "sha256": "342252e35b8b97425b5fcdc08da15eb4f9a08d6bf407c5babf6ca7d84293ea16",
+      "bytes": 2026
+    },
+    {
+      "path": "numerical/reaction-zero/README.md",
+      "sha256": "7eadbc2fc90c60764b78b2cc70a17645e1b0c0f304158c595ac3507a640c14ea",
+      "bytes": 1653
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/convergence.pdf",
+      "sha256": "3f169f03641c3e87d8e991dcba3deea618b6d956e857034de81f4575931d1cb8",
+      "bytes": 22184
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/convergence.png",
+      "sha256": "d53ebe2331bdb3e0b9ab615da7a58bb2c72b32e71a1adbf821977de6b7e9c3c6",
+      "bytes": 134381
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/metrics.csv",
+      "sha256": "f90a8da942a8910a9da30027c55add3600a389ec569c9b018e04b014724cef84",
+      "bytes": 4714
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/solutions.json",
+      "sha256": "acdb113f2e947d7ca3dd7b72bdbd87e0aec492e8480c86ff1ed600fa283f8982",
+      "bytes": 583037
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/source/numerical/__init__.py",
+      "sha256": "76d0c4a28821f01f1fc51dc0cbaef5ed3909bd6f4c1b9c93858dd7472fe4ae0a",
+      "bytes": 201
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/source/numerical/render_demo.py",
+      "sha256": "d3e8d3e135dfeb95393732941211c8b9179b351eddc5293a6916bac46ff10c03",
+      "bytes": 781
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/source/numerical/requirements.txt",
+      "sha256": "85d4745ab58b976d20546a1e3d5b823fe414c8ab1ab523903e6a29a5886d53d5",
+      "bytes": 161
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/source/numerical/run_experiments.py",
+      "sha256": "2483e5076973e48adf398401faf8fb63db5bb2ed78d496bf754a3b4c80448fb9",
+      "bytes": 10757
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/source/numerical/solver.py",
+      "sha256": "a49160cf4c27e4961cf1333aeb219a6154d7bdb037399ddd3b4b5e51c4ce1cca",
+      "bytes": 14480
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/source/numerical/track_experiment.py",
+      "sha256": "0d24a2f700b995788bf1dc695c2d70e9f408d4bc566d94bf6b27699575e38167",
+      "bytes": 2139
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical-data/summary.json",
+      "sha256": "523169e88e9a2800a831d103733746fbc663e9f858d16a628673918b8cb79ce5",
+      "bytes": 3597
+    },
+    {
+      "path": "numerical/reaction-zero/docs/numerical.html",
+      "sha256": "8b105df44fac944354d655b97d63969075846034b967cb70531ce3defd96879c",
+      "bytes": 589703
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/MODEL.md",
+      "sha256": "d3a6199843f2fd2bfa588570f056450fafff232ced757aaab58567d829dd4eae",
+      "bytes": 9175
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/__init__.py",
+      "sha256": "76d0c4a28821f01f1fc51dc0cbaef5ed3909bd6f4c1b9c93858dd7472fe4ae0a",
+      "bytes": 201
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/browser-requirements.txt",
+      "sha256": "8daeeff124c3dd7aa8358717c358b39e2b014d2e631fb5d46a41f86c124a6e6e",
+      "bytes": 88
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/demo_template.html",
+      "sha256": "791fa50e3af74c8f559309022a11d2c0f69271da15bf255d39fc3477fca83078",
+      "bytes": 33875
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/render_demo.py",
+      "sha256": "d3e8d3e135dfeb95393732941211c8b9179b351eddc5293a6916bac46ff10c03",
+      "bytes": 781
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/requirements.txt",
+      "sha256": "85d4745ab58b976d20546a1e3d5b823fe414c8ab1ab523903e6a29a5886d53d5",
+      "bytes": 161
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/run_experiments.py",
+      "sha256": "15e19afa78ef267a7f033ea3d4f53953bc7c9f301dde0ae0a8dddd0b74a94405",
+      "bytes": 11073
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/solver.py",
+      "sha256": "a49160cf4c27e4961cf1333aeb219a6154d7bdb037399ddd3b4b5e51c4ce1cca",
+      "bytes": 14480
+    },
+    {
+      "path": "numerical/reaction-zero/numerical/track_experiment.py",
+      "sha256": "fd479f742b9d7f8e1b34236d3b442db005523cbaeecdfa122841460e1a0ade7e",
+      "bytes": 529
+    },
+    {
+      "path": "numerical/reaction-zero/tests/check_browser.py",
+      "sha256": "bcc35d5f28f13b6e1188a9f8db67dff579f058ff51c33e592be79a3e56c8f697",
+      "bytes": 5361
+    },
+    {
+      "path": "numerical/reaction-zero/tests/test_numerical.py",
+      "sha256": "764551e71c99fd30fcbf51da39d0a443c8bdd28d6ece1d188cf739a93c4cf976",
+      "bytes": 6498
+    },
+    {
+      "path": "numerical/reaction-zero/tests/test_portable_entrypoints.py",
+      "sha256": "e172c6567fce215bfe9499a4fb418892954f8a18f5d0ecb41bdeecce8e45747b",
+      "bytes": 3059
+    },
+    {
+      "path": "numerical/reaction-zero/tests/test_saved_solutions.py",
+      "sha256": "6065e126eab0013bbaa212fbd4ab8a931f07e8d0c739254bd6baffe1261904bc",
+      "bytes": 2243
+    },
+    {
+      "path": "numerical/requirements-tracking.txt",
+      "sha256": "dc2e356a0c6bca3574f138aa55519f84212b311af781ac9e982bb6ada66b8653",
+      "bytes": 100
+    },
+    {
+      "path": "numerical/rotating-reaction/README.md",
+      "sha256": "fbdaae082e78634b19722ef93598e566f2e2e4a5b85377e73455e92a7130c068",
+      "bytes": 1220
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/action_thresholds.png",
+      "sha256": "728f0e19295e0e0e68f70eb02ad87bc18f9249255403b5233278bb5ee8eb51b7",
+      "bytes": 133075
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/metadata.json",
+      "sha256": "399d55fd8676c8e3e4665f1dc8830109490297ce1bdc412a412c267146a67b58",
+      "bytes": 3879
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/optimal_paths.png",
+      "sha256": "00b14a1b31eaade7c542018cef46fe82f9b687d877b9c75984d18c02bfa1b145",
+      "bytes": 406399
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/results.json",
+      "sha256": "edba47145d546fa02f863f0a7790992bc1d2a0d51925f2f67fad9aeb156791d3",
+      "bytes": 3131869
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/source/numerical/__init__.py",
+      "sha256": "91ef5bd07545f2767fc01fb1351d37f18d89905a49abc021195141485967ff64",
+      "bytes": 410
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/source/numerical/experiments.py",
+      "sha256": "58d22776883363c65ec9285964b6f275af13837ea8ab812255eb712bd5d89499",
+      "bytes": 14072
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/source/numerical/rotating_family.py",
+      "sha256": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+      "bytes": 8822
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/source/tests/test_numerical.py",
+      "sha256": "d2c95813ef3392659d3119f11e6b68229c22d68bf28c36780c5afd9d84c0e210",
+      "bytes": 7973
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/source_hashes.json",
+      "sha256": "db2d06f632855e6e6495fb3ab66030358d5acb8bffb49827aabe6f6d0e16708c",
+      "bytes": 394
+    },
+    {
+      "path": "numerical/rotating-reaction/docs/numerical-data/summary.csv",
+      "sha256": "07c1b7b39ae6eff2a2f3c9a2636866a7f37decd93a9af89c01255472538fd59a",
+      "bytes": 80234
+    },
+    {
+      "path": "numerical/rotating-reaction/numerical/__init__.py",
+      "sha256": "91ef5bd07545f2767fc01fb1351d37f18d89905a49abc021195141485967ff64",
+      "bytes": 410
+    },
+    {
+      "path": "numerical/rotating-reaction/numerical/experiments.py",
+      "sha256": "15470b384d675e8379813c791e0d4d6103eee668b5739f2da9cd2006113b27e2",
+      "bytes": 14258
+    },
+    {
+      "path": "numerical/rotating-reaction/numerical/requirements.txt",
+      "sha256": "02ff319763e6790f588576f905f5657f01e8036721b4af3f1b64da608a433173",
+      "bytes": 46
+    },
+    {
+      "path": "numerical/rotating-reaction/numerical/rotating_family.py",
+      "sha256": "0611e72d309b6ab533828890df9f04a0afacb05109eb82b4810dda9fcd7bdac9",
+      "bytes": 8982
+    },
+    {
+      "path": "numerical/rotating-reaction/tests/test_numerical.py",
+      "sha256": "8114b69cbab9ba2b6e81c42c424247cc453532f4f1d0eb878bb644d8ee5ca95d",
+      "bytes": 8181
+    },
+    {
+      "path": "numerical/separation/README.md",
+      "sha256": "2c7ca3ab78dfe8224b955dfe1e70bf61d28afef6e07140ede7851cee16c54129",
+      "bytes": 1567
+    },
+    {
+      "path": "numerical/separation/numerical/__init__.py",
+      "sha256": "8a985cc0cd77982840fe4eac30f004edc836331debfd9d7a02f2d154d59fc9ad",
+      "bytes": 80
+    },
+    {
+      "path": "numerical/separation/numerical/experiment_config.json",
+      "sha256": "e9df33eb44159a5e3f73add44319ff7c05e7188f2bf0b98d0875440b03637bc6",
+      "bytes": 886
+    },
+    {
+      "path": "numerical/separation/numerical/requirements.txt",
+      "sha256": "69b7a8672f5fd004a991a054f4fb9917e4793022ee2f8ab3f07c456668d45800",
+      "bytes": 60
+    },
+    {
+      "path": "numerical/separation/numerical/run_demo.py",
+      "sha256": "bf93dd944d37d8b5262dd49526af6801e4c55dcf90a4ffeb43cdec746f6d7712",
+      "bytes": 17434
+    },
+    {
+      "path": "numerical/separation/numerical/seed_policy.json",
+      "sha256": "ce0e4eca47560845c81d6b391307570a322126119aba625eda9616dde424c39d",
+      "bytes": 318
+    },
+    {
+      "path": "numerical/separation/numerical/test_portable_entrypoints.py",
+      "sha256": "3f6afb23e388ccca595e2e10c5e951404ff2cc5fc6b554c3e924fc84411d01b2",
+      "bytes": 680
+    },
+    {
+      "path": "numerical/separation/numerical/test_transport_demo.py",
+      "sha256": "41653d9c860a64036cafa2e345ab0778d262fdc985bce2b1b73f404f24466285",
+      "bytes": 6362
+    },
+    {
+      "path": "numerical/separation/numerical/transport_demo.py",
+      "sha256": "870738a091831111ff3875f0c8e2be5f476f7464caf700ba549e103956b20d91",
+      "bytes": 6162
+    },
+    {
+      "path": "numerical/track_example.py",
+      "sha256": "d24569259849928cf4dd19526061682395c2b1b306abb6b3c9fbf3cf90b020f6",
+      "bytes": 4227
+    },
+    {
+      "path": "numerical/validation/README.md",
+      "sha256": "7d352e517a917bb1e51c4b948f170e5483785241ded87c57c2b335de4e019db7",
+      "bytes": 5119
+    },
+    {
+      "path": "numerical/validation/experiments.py",
+      "sha256": "59cebda51a6bcce2fdcda59086ab36c185182c64092e916ca58e6722ceba8abe",
+      "bytes": 19344
+    },
+    {
+      "path": "numerical/validation/figures.py",
+      "sha256": "38dc730856063a5ccc96df6769134b4f9cf64233e6adfea99a7bb5152914d1f5",
+      "bytes": 13190
+    },
+    {
+      "path": "numerical/validation/requirements.txt",
+      "sha256": "b71718826f7ba0832c48656c2b1dade13b7204482f3f4b4f51f09a080229ae1a",
+      "bytes": 173
+    },
+    {
+      "path": "numerical/validation/results/metadata.json",
+      "sha256": "ebe46a97d1a139ec2a08ed89c281f47b45e0ef8b0281fca7c0ade06a5ca94f50",
+      "bytes": 4347
+    },
+    {
+      "path": "numerical/validation/results/orchestration_source_hashes.json",
+      "sha256": "58c559375d5b79ca27099e2bf23600f2915381e6518790fc2d87b2f872b6bc58",
+      "bytes": 222
+    },
+    {
+      "path": "numerical/validation/results/results.json",
+      "sha256": "c732b17cba5697242e11cb2ea6a9a34de16cfebe0bb11793b56f59f05ec2b2f0",
+      "bytes": 556106
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/rotating-reaction/numerical/rotating_family.py",
+      "sha256": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+      "bytes": 8822
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/README.md",
+      "sha256": "0773f6838f65341cd7161a3564741bc67c592736c3a36e2d4427c50abf4b7583",
+      "bytes": 4357
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/experiments.py",
+      "sha256": "59cebda51a6bcce2fdcda59086ab36c185182c64092e916ca58e6722ceba8abe",
+      "bytes": 19344
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/figures.py",
+      "sha256": "4f6b5649959490bdd1a2d91e342bac07d1bb67586c0c3cf7aa34f16645279d9e",
+      "bytes": 6093
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/requirements.txt",
+      "sha256": "b71718826f7ba0832c48656c2b1dade13b7204482f3f4b4f51f09a080229ae1a",
+      "bytes": 173
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/solver.py",
+      "sha256": "7af5b452e2401acaa252d564d7b27c3bf5d390acb81b1e25b620e8911f697b33",
+      "bytes": 14912
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/tests/test_experiments.py",
+      "sha256": "7c278e575ac53eb247f6d69589573555d999064f68218bde779e40276867daa0",
+      "bytes": 7530
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/tests/test_tracking.py",
+      "sha256": "187d520b3c57fdf9960ba24f1caa7c8c72d8868352f4f97c7539fb6804bace47",
+      "bytes": 5538
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/tests/test_weights.py",
+      "sha256": "4b9f9cccaa79a6b9d00fdfe818a9a64210160c0b32dc195cdac54d6e6295283c",
+      "bytes": 1603
+    },
+    {
+      "path": "numerical/validation/results/source/numerical/validation/track_experiment.py",
+      "sha256": "f7a807515a1c0b41c34c2e4873e4e140c9b68c141d3aeb28375d4f251da5568b",
+      "bytes": 11023
+    },
+    {
+      "path": "numerical/validation/results/source_hashes.json",
+      "sha256": "491aec85654444bdb01d39d6160b83eb12f6b5a01c9aca173b07fe78002708c6",
+      "bytes": 914
+    },
+    {
+      "path": "numerical/validation/results/summary.csv",
+      "sha256": "746f9d610e1220e8da54bcec776d64e6758ce94535d2561273da6279bd921e51",
+      "bytes": 13705
+    },
+    {
+      "path": "numerical/validation/results/tracking_metadata.json",
+      "sha256": "5d9c70fe96b399f400f7d3f7823e8bb19949699ac7694623662af4959811f41b",
+      "bytes": 1972
+    },
+    {
+      "path": "numerical/validation/results/tracking_result.json",
+      "sha256": "c5e159ee85cc8e1f8a2f85a0e59f52dc98fc82883d6cae2b46d2b506b83ceed8",
+      "bytes": 1009
+    },
+    {
+      "path": "numerical/validation/solver.py",
+      "sha256": "7af5b452e2401acaa252d564d7b27c3bf5d390acb81b1e25b620e8911f697b33",
+      "bytes": 14912
+    },
+    {
+      "path": "numerical/validation/tests/test_example_tracking.py",
+      "sha256": "b410d1516479cd8f263652acea8869b7f0ed967dbae6c07135072e435fd9453c",
+      "bytes": 2252
+    },
+    {
+      "path": "numerical/validation/tests/test_experiments.py",
+      "sha256": "7c278e575ac53eb247f6d69589573555d999064f68218bde779e40276867daa0",
+      "bytes": 7530
+    },
+    {
+      "path": "numerical/validation/tests/test_tracking.py",
+      "sha256": "36121f369048e3a7ac180bd14fa2ace025853a94b8f2263be3cf1cead5a9343a",
+      "bytes": 6287
+    },
+    {
+      "path": "numerical/validation/tests/test_weights.py",
+      "sha256": "4b9f9cccaa79a6b9d00fdfe818a9a64210160c0b32dc195cdac54d6e6295283c",
+      "bytes": 1603
+    },
+    {
+      "path": "numerical/validation/track_experiment.py",
+      "sha256": "48c9652f5d12b1d543ee324ce74d2e96f579d272ce40eeff2118a4fd7af33623",
+      "bytes": 10793
+    },
+    {
+      "path": "paper.pdf",
+      "sha256": "b2f2035ec794837ac58f78412361062399516d7057be40857170c9e1a515f7cc",
+      "bytes": 516873
+    },
+    {
+      "path": "reproducibility/README.md",
+      "sha256": "ff4226762c493f03239cf71bb0dba9c738ab20191785d8b4e1124612d751119a",
+      "bytes": 3525
+    },
+    {
+      "path": "reproducibility/kernel-certificate.json",
+      "sha256": "c94a27b4dac1bc3f66bbbf3c9235f20f781bcd6360f375ab59e79fb9fdffa7aa",
+      "bytes": 218203
+    },
+    {
+      "path": "reproducibility/numerical-provenance.json",
+      "sha256": "c321dc723c728603a61ff4e66542f5bffe4af6167affba6cf26159e3cbe43555",
+      "bytes": 4951
+    },
+    {
+      "path": "verification/ATOMIC_INVENTORY.json",
+      "sha256": "4331890a5e19127f21b57d89067134b1b8ca460d5a5b1e7c573b1071e94305f1",
+      "bytes": 311213
+    },
+    {
+      "path": "verification/ATOM_MAP.json",
+      "sha256": "fdb438e3b133b2bdf9797211d1eaf3712e1b474195fcd4b3f4a60e09af4128dc",
+      "bytes": 13714044
+    },
+    {
+      "path": "verification/DumpTypes.lean",
+      "sha256": "b9b785e2d41ba20d2d380bf64a6b9c159a8214bf883746afb22489d6cff85015",
+      "bytes": 3169
+    },
+    {
+      "path": "verification/MATHEMATICAL_SCOPE.json",
+      "sha256": "0b091b951f97ab12c0a57c3fce19e4e200813183a71870469e6fcb221a16d662",
+      "bytes": 3092
+    },
+    {
+      "path": "verification/PARAGRAPH_MAP.json",
+      "sha256": "1415ac64a031f7da89e22cfa272a81b37231b31f64cfb69e51f1968378a9cb99",
+      "bytes": 36159
+    },
+    {
+      "path": "verification/STATEMENT_MAP.md",
+      "sha256": "43c4d858a997c3a3a43a675a2b4802bb038364cf67b191f9d6fa2904e38de52e",
+      "bytes": 25809
+    },
+    {
+      "path": "verification/check-kernels.sh",
+      "sha256": "89ac58d15d70ed0aea3b47526af301bf4db50ad874e286d605ecfb1454f5df46",
+      "bytes": 6753
+    },
+    {
+      "path": "verification/check_atom_map.py",
+      "sha256": "2d2eb005533812e0df344f19dbbee6ef9de6b92d128a52cf44cdd56966cc3782",
+      "bytes": 26533
+    },
+    {
+      "path": "verification/compiled-declarations.json",
+      "sha256": "6e1af412acbd68cf001f329e29ea3bb88a1cfbd14caf79f281d2ceab6012620c",
+      "bytes": 814140
+    },
+    {
+      "path": "verification/declaration-types.json.gz",
+      "sha256": "4c26367829804434cbdd51de0fd8f36103f1861b78b94afa892a04bdf7b51c49",
+      "bytes": 5580851
+    },
+    {
+      "path": "verification/exclusions.json",
+      "sha256": "ccffc9ec3a4ffd63f539f8203bae54e9099dfbbb1513ae5060d1cceed18f293f",
+      "bytes": 271
+    },
+    {
+      "path": "verification/modules.txt",
+      "sha256": "0f61577880807dc68435136d9d1fc21076966daead018c509d53d5bbd8302097",
+      "bytes": 38
+    },
+    {
+      "path": "verification/resource-control.sh",
+      "sha256": "e95582c7fbac89c2a0467de9a2acde5c9bf9530d4bfdaf755407f79de72cbab3",
+      "bytes": 5935
+    },
+    {
+      "path": "verification/source-hashes.json",
+      "sha256": "6817e238d31f76681b872b789134866c719661bb37fa5b8cca80bf3d95d08d26",
+      "bytes": 15799
+    },
+    {
+      "path": "verification/targets.txt",
+      "sha256": "0b024e5270d7b391ffabacf6e531394b257a64596a0f63a135261124bd8ac66f",
+      "bytes": 174647
+    },
+    {
+      "path": "verification/tests/test_check_atom_map.py",
+      "sha256": "33d9f591b61ab9060c4ab22ea66e26f644d84c005bad9bfc7a93ad79485583bd",
+      "bytes": 22638
+    },
+    {
+      "path": "verification/tests/test_resource_control.py",
+      "sha256": "28230f6f28cad494e485a98877f9d9533a5fa16352f254f7b8af0f761b593634",
+      "bytes": 12958
+    },
+    {
+      "path": "verification/tests/test_verify_manifest.py",
+      "sha256": "07dce5cb537c0a075fde5094bc6f77e894e620de799eded3ed0c6b8817ae563c",
+      "bytes": 11949
+    },
+    {
+      "path": "verification/verify_manifest.py",
+      "sha256": "283100041812b3b4b4039d2e462d5d8e597dea65b38b94818b4fbbcf99f70c62",
+      "bytes": 15977
+    }
+  ]
+}

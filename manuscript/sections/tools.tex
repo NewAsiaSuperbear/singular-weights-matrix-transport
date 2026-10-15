@@ -1,0 +1,366 @@
+\section{Common estimates and variational tools}\label{sec:tools}
+We use the continuous-dual framework and positivity criterion of
+\cite[Lemma 3.3 and Appendix A]{LiZou}. The trace and variation estimates
+below develop \cite[Lemma 3.12 and Proposition 3.13]{LiZou} for varying PSD
+weights and fixed matrix directions.
+
+\begin{lemma}[Continuous representation and positivity]\label{lem:duality}
+For every symmetric-mass path,
+\begin{equation}\label{eq:continuousdual}
+ \J_{L,H}(\mu)=
+ \sup_{(A,B,C)\in C(Q,\Oset_{L,H})}
+ \left(\int A\cdot dG+\int B\cdot dq+\int C\cdot dR\right).
+\end{equation}
+Finite action forces $g\succeq0$ almost everywhere, hence $G(S)\succeq0$
+for every measurable $S$. The fixed-weight action is weak-star lower
+semicontinuous.
+\end{lemma}
+\begin{proof}
+The set $\Oset_{L,H}$ contains zero and is closed because its defining
+matrix expression is continuous and the cone of negative semidefinite
+matrices is closed. To verify convexity, for $0\le\theta\le1$ write
+$B_\theta=\theta B_1+(1-\theta)B_2$. For every $K\succeq0$,
+\[
+ \begin{aligned}
+ &\theta B_1KB_1^T+(1-\theta)B_2KB_2^T-B_\theta KB_\theta^T\\
+ &\qquad=\theta(1-\theta)(B_1-B_2)K(B_1-B_2)^T\succeq0.
+ \end{aligned}
+\]
+Use $K=LL^T$ and the corresponding identity for $C$ with $K=HH^T$.
+The constraint at a convex combination of two dual triples is therefore
+bounded above by the convex combination of their constraint matrices,
+which is negative semidefinite.
+
+For every continuous admissible dual field, the definition of the support
+function gives $A\cdot g+B\cdot z+C\cdot r\le j_{L,H}(g,z,r)$ pointwise.
+The signed Radon--Nikodym pairing and integration give the upper bound in
+\eqref{eq:continuousdual}.
+
+For the reverse inequality, following \cite[Appendix A]{LiZou}, write
+$v=(g,z,r)$ and embed the dual set in the full-coordinate Hilbert space
+\[
+ \begin{gathered}
+ \mathcal E=\R^{n\times n}\times\R^{n\times k}\times\R^{n\times n},\\
+ \norm{(A,B,C)}_2^2=\norm A_F^2+\norm B_F^2+\norm C_F^2.
+ \end{gathered}
+\]
+The mass field of every admissible dual point remains symmetric.
+The inner product is the sum of the three Frobenius pairings. Thus both
+off-diagonal entries of each symmetric matrix are counted in its norm
+and pairing, exactly as in the action. The preceding calculation establishes that the dual set is nonempty,
+closed and convex.
+
+\paragraph{Finite measurable selectors.}
+Every subset of a finite-dimensional Euclidean space is second countable
+and therefore separable.
+Choose a countable dense sequence $(u_\ell)_{\ell\ge0}$ in
+$\Oset_{L,H}$, with $u_0=0$. Continuity of a linear pairing in its dual
+argument gives, for every $v$,
+\[
+ j_{L,H}(v)=\sup_{\ell\ge0}u_\ell\cdot v.
+\]
+Indeed, every fixed point of the dual set is a limit of sequence points,
+so its pairing is bounded by this countable supremum. This reasoning
+also applies when the supremum is infinite.
+
+Choose finite Borel representatives of the Radon--Nikodym densities,
+altering a null set if necessary, and put
+$a_\ell=u_\ell\cdot v$ and $m_N=\max_{0\le\ell\le N}a_\ell$. These are
+measurable scalar functions. Define $s_0=u_0$ recursively: keep $s_N$
+when $a_{N+1}\le s_N\cdot v$, and otherwise take $s_{N+1}=u_{N+1}$.
+The comparisons are measurable, so each $s_N$ is a measurable selector
+whose values belong to the finite set $\{u_0,\ldots,u_N\}$; in particular
+it is bounded. This rule retains the earlier choice in a tie.
+It takes values in the dual set and satisfies $s_N\cdot v=m_N$.
+Because $u_0=0$, the functions $m_N$ are nonnegative and increase
+pointwise to $j_{L,H}(v)$.
+
+\paragraph{Weighted continuous approximation.}
+Let $v_a$ range over all matrix entries of the three densities, set
+$w=\sum_a|v_a|$, and define $d\nu=w\,d\rho_\mu$. The coordinate densities
+are integrable, so $\nu$ is a finite Borel measure and hence a Radon
+measure on the compact metric space $Q$. Moreover $\norm v_2\le w$.
+We give the approximation argument in this particular weighted measure.
+For a Borel set $E$ and $\eta>0$, regularity supplies a compact $K\subset E$
+and a relatively open $U\supset E$ with $\nu(U\setminus K)<\eta$.
+The continuous separation of two disjoint closed sets supplies
+$f:Q\to[0,1]$ equal to $1$ on $K$ and $0$ on $Q\setminus U$.
+It follows that $\int_Q|f-\mathbf1_E|\,d\nu<\eta$.
+Express $s_N$ as a finite sum $\sum_\ell b_\ell\mathbf1_{E_\ell}$ over
+its measurable level sets. Applying the preceding approximation to these
+sets and summing with the vector coefficients gives continuous fields $h:Q\to\mathcal E$
+with arbitrarily small $\int_Q\norm{h-s_N}_2\,d\nu$.
+For example, the triangle inequality bounds this integral by
+$\sum_\ell\norm{b_\ell}_2
+\int_Q|f_\ell-\mathbf1_{E_\ell}|\,d\nu$, and each scalar error can
+be chosen separately. This also proves the usual density of continuous
+fields in weighted $L^1$ after simple-function approximation.
+
+\paragraph{Projection preserves the approximation.}
+Let $P$ be nearest-point projection onto $\Oset_{L,H}$ in $\mathcal E$.
+To obtain the projection, choose points whose distances from $x$ converge
+to the infimum. Convexity puts their midpoints in the same set, and the
+parallelogram identity bounds the squared distance between two chosen
+points by twice the sum of their squared distances from $x$ minus four
+times the squared infimum. This tends to zero, so the minimizing sequence
+is Cauchy. Completeness and closedness give a minimizer $p$.
+The same midpoint identity proves uniqueness: two distinct minimizers
+would have a midpoint with strictly smaller squared distance. Comparing squared distances
+along the segment from $p$ to any $z\in\Oset_{L,H}$ gives
+\[
+ \langle x-p,z-p\rangle\le0.
+\]
+For $p=P(x)$ and $q=P(y)$, apply this inequality first with $z=q$ and
+then with the roles reversed and $z=p$. Adding yields
+\[
+ \norm{p-q}_2^2\le\langle p-q,x-y\rangle
+                   \le\norm{p-q}_2\norm{x-y}_2.
+\]
+Thus $P$ is $1$-Lipschitz and continuous, including when $p=q$, and it
+fixes every point of the dual set.
+
+Given $\varepsilon>0$, choose the continuous approximation $h$ with
+$\int_Q\norm{h-s_N}_2\,d\nu\le\varepsilon$ and put
+$u_{N,\varepsilon}=P\circ h$. This is a continuous admissible field.
+Since $P(s_N)=s_N$ pointwise, nonexpansiveness and $\norm v_2\le w$ give
+\[
+ \begin{aligned}
+ \int_Q|(s_N-u_{N,\varepsilon})\cdot v|\,d\rho_\mu
+ &\le\int_Q\norm{s_N-u_{N,\varepsilon}}_2\,d\nu\\
+ &\le\int_Q\norm{s_N-h}_2\,d\nu\le\varepsilon.
+ \end{aligned}
+\]
+Every integral here is well-defined: the selector is bounded, continuous
+fields are bounded on compact $Q$, and all coordinate densities are
+integrable. If $S$ denotes the continuous dual supremum, this estimate
+implies $\int_Qm_N\,d\rho_\mu\le S+\varepsilon$ for each $N$.
+Let $\varepsilon\downarrow0$ and then use monotone convergence to obtain
+\[
+ \J_{L,H}(\mu)=\lim_{N\to\infty}\int_Qm_N\,d\rho_\mu\le S.
+\]
+If the action is infinite, the same increasing selector integrals force
+$S=+\infty$. This proves the reverse inequality.
+
+For positivity, fix a point at which the symmetric density $g$ has finite
+local cost. For each $v\in\R^n$ and $s\ge0$, the triple $(-svv^T,0,0)$ is
+admissible and has pairing $-s v^Tgv$. Thus $v^Tgv<0$ implies
+$j_{L,H}(g,z,r)=+\infty$, a contradiction. All quadratic forms are
+therefore nonnegative at every such point. Finite action implies finite
+local cost almost everywhere, hence $g\succeq0$ almost everywhere.
+Consequently, for every measurable $S$ and every
+real $v$, $v^TG(S)v=\int_S v^Tgv\,d\rho_\mu\ge0$.
+Finally each continuous dual pairing is weak-star continuous in all
+coordinates. A supremum of these continuous functions is lower
+semicontinuous, proving the last assertion.
+\end{proof}
+
+\begin{lemma}[Trace and Frobenius variation estimates]\label{lem:rates}
+Let $\mu\in\CE$ have finite action $E=\J_{L,H}(\mu)$, set
+$T=\int_Q\tr(dG)$ and $m_0=\tr G_0(\Omega)$. Then
+\begin{equation}\label{eq:trace}
+ T=m_0+\int_Q(1-t)\tr(dR),\qquad
+ 0\le T\le2m_0+2\norm H_F^2 E.
+\end{equation}
+For any compatible rectangular $A$,
+\begin{equation}\label{eq:rates}
+ \norm{qA}_{\TV,F}^2\le2ET\norm{L^TA}_F^2,
+ \qquad\norm{RA}_{\TV,F}^2\le2ET\norm{H^TA}_F^2.
+\end{equation}
+All variations in \eqref{eq:rates} are finite.
+\end{lemma}
+\begin{proof}
+Test \eqref{eq:ce} with $(1-t)I_n$. Since $D^*I_n=0$, its left side is
+$-T+\int_Q(1-t)\tr(dR)$ and its right side is $-m_0$, giving the trace
+identity. Positivity from Lemma~\ref{lem:duality} gives $T\ge0$.
+For real $s$, use the admissible reaction test
+$C=s(1-t)I_n$, $B=0$, $A=-CHH^TC^T/2$. Pairing and integrating, then using
+$(1-t)^2\le1$ and $HH^T\preceq\norm H_F^2I_n$, gives
+\[
+ s(T-m_0)-\tfrac12s^2\norm H_F^2T\le E.
+\]
+If $H\ne0$, substitution of $s=\norm H_F^{-2}$ gives
+$(T/2-m_0)/\norm H_F^2\le E$, which is \eqref{eq:trace}.
+If $H=0$, the inequality for both signs and arbitrarily large values of
+$s$ forces $T=m_0$.
+
+For the variation bound, work where the local cost is finite. For a
+coordinate vector $e_i$ and $v\in\R^k$, use the triple with flux
+$B=se_iv^T$, reaction $C=0$ and mass field
+$-\tfrac{s^2}2\norm{L^Tv}^2e_ie_i^T$. Its pairing is
+$s(zv)_i-s^2g_{ii}\norm{L^Tv}^2/2$. For real $x$ and $a>0$,
+\[
+ \begin{aligned}
+ sx-\tfrac a2s^2&=\frac{x^2}{2a}
+                   -\frac a2\left(s-\frac xa\right)^2,\\
+ \sup_{s\in\R}\left(sx-\tfrac a2s^2\right)&=\frac{x^2}{2a}.
+ \end{aligned}
+\]
+If $a=0$, finiteness of this supremum forces $x=0$. Apply these two cases
+with $a=g_{ii}\norm{L^Tv}^2\ge0$ and $x=(zv)_i$. In both cases,
+\[
+ |(zv)_i|^2\le2j_{L,H}(g,z,r)\,g_{ii}\norm{L^Tv}^2.
+\]
+Applying this inequality to each column $a_b$ of the fixed matrix $A$
+and summing over $i,b$ gives
+\[
+ \begin{aligned}
+ \norm{zA}_F^2
+ &\le2j_{L,H}(g,z,r)\Bigl(\sum_i g_{ii}\Bigr)
+                            \Bigl(\sum_b\norm{L^Ta_b}^2\Bigr)\\
+ &=2j_{L,H}(g,z,r)\tr(g)\norm{L^TA}_F^2.
+ \end{aligned}
+\]
+The same rank-one test in the $C$ channel gives
+$\norm{rA}_F^2\le2j_{L,H}(g,z,r)\tr(g)\norm{H^TA}_F^2$ for every
+compatible $A$. In particular it controls the full reaction density.
+Integrating square roots and applying Cauchy--Schwarz to the two
+nonnegative functions $\sqrt{j_{L,H}}$ and $\sqrt{\tr g}$ yields
+\[
+ \begin{aligned}
+ \int_Q\norm{zA}_F\,d\rho_\mu
+ &\le\sqrt2\norm{L^TA}_F
+       \left(\int_Qj_{L,H}\,d\rho_\mu\right)^{1/2}
+       \left(\int_Q\tr g\,d\rho_\mu\right)^{1/2}\\
+ &=\sqrt{2ET}\norm{L^TA}_F,
+ \end{aligned}
+\]
+and the corresponding reaction inequality. The product densities are
+integrable; Radon--Nikodym linearity identifies them with the densities
+of $qA$ and $RA$. Formula~\eqref{eq:variation} and squaring give
+\eqref{eq:rates}, including $E=0$, $T=0$, and null-weight directions.
+\end{proof}
+
+For a positive-definite fixed reaction weight, existence of a minimizer is
+established in \cite[Theorem 4.2]{LiZou}. The following argument treats
+bounded varying weights and singular fixed weights at finite value.
+
+\begin{lemma}[Bounded-weight compactness]\label{lem:compactness}
+If $(L_j,H_j)$ is bounded and admissible $\mu_j$ have uniformly bounded
+actions, a common subsequence converges weak-star in all signed coordinates
+to an admissible path. For fixed weights, every finite minimum is attained
+with PSD measure-valued mass.
+\end{lemma}
+\begin{proof}
+The uniform bounds on the weights and actions, together with
+\eqref{eq:trace}, bound $T_j$. Taking coordinate vectors for $A$ in
+\eqref{eq:rates} bounds the Frobenius variation of every column of $q_j$
+and $R_j$, hence the variation of every scalar coordinate. Positivity
+also controls all mass coordinates: the $2\times2$ principal minors of
+$g_j\succeq0$ give
+\[
+ |(g_j)_{ab}|\le\sqrt{(g_j)_{aa}(g_j)_{bb}}
+ \le\tfrac12\bigl((g_j)_{aa}+(g_j)_{bb}\bigr)\le\tr g_j.
+\]
+Integrating shows $|G_j^{ab}|(Q)\le T_j$. Thus every coordinate has a
+uniform total-variation bound.
+
+We spell out why these bounds give a common subsequence. If $Q$ is
+empty, every coordinate measure is zero; otherwise choose a point of $Q$.
+Decompose each signed coordinate $\eta_j$ into its positive and negative Jordan parts.
+Both are finite positive measures with mass bounded by the common
+variation bound $C$. A positive measure $\gamma$ of mass $m\le C$ can be
+written as $m\pi$, where $\pi$ is a probability measure; if $m=0$, any
+fixed probability measure gives the same zero measure. The space of
+probability measures on compact metric $Q$ is compact and metrizable for
+weak convergence. Thus $[0,C]$ times that space is sequentially compact.
+There are only finitely many coordinates and two Jordan parts for each,
+so compactness of their finite product supplies a single subsequence
+along which all masses and all normalized positive measures converge.
+Multiplication by the masses gives weak limits of all the Jordan parts.
+
+Subtract each limiting negative part from its limiting positive part.
+The resulting finite signed Radon measure $\eta$ satisfies
+$\int f\,d\eta_j\to\int f\,d\eta$ for every $f\in C(Q)$, because
+this pairing is the difference of the two positive-measure pairings.
+The limiting positive and negative parts need not remain mutually
+singular; their difference still has exactly this pairing. Applying the
+construction simultaneously to all coordinates proves the asserted
+weak-star convergence. The relations
+$G_j^{ab}=G_j^{ba}$ pass to the limit, so the limiting mass is symmetric.
+For each fixed closed-domain $C^1$ test in \eqref{eq:ce}, all coordinates
+of $\partial_t\Phi$, $D^*\Phi$ and $\Phi$ are continuous on $Q$.
+Every integral in that equation therefore converges, while its prescribed
+endpoint terms are unchanged. The limiting path is admissible.
+
+For fixed weights and finite infimum $V(L,H)$, choose admissible paths
+with actions at most $V(L,H)+1/(j+1)$. This is a bounded finite-action
+minimizing sequence, so the preceding argument gives an admissible
+subsequential limit $\mu$. Lemma~\ref{lem:duality} gives
+$\J_{L,H}(\mu)\le V(L,H)$, and the definition of the infimum gives the
+opposite inequality. Thus the minimum is attained, and its finite action
+implies PSD measure-valued mass.
+\end{proof}
+
+\begin{lemma}[Joint lower bound]\label{lem:jointlsc}
+If $L_j\to L_*$, $H_j\to H_*$ and $\mu_j\weak\mu$, then
+\begin{equation}\label{eq:jointlsc}
+ \J_{L_*,H_*}(\mu)\le\liminf_j\J_{L_j,H_j}(\mu_j).
+\end{equation}
+No relative comparison is needed here.
+\end{lemma}
+\begin{proof}
+If the right side of \eqref{eq:jointlsc} is $+\infty$, the inequality is
+automatic. Otherwise pass to a subsequence whose finite actions converge to that
+finite lower limit, denoted by $\ell$, and relabel it. Fix a continuous
+target dual field $(A,B,C)$. We compensate for the change in its quadratic
+constraint by subtracting a scalar multiple of $I_n$ from its mass field.
+Let $M_B=\sup_Q\norm B_F^2$, $M_C=\sup_Q\norm C_F^2$, write
+$|S|_1=\sum_{a,b}|S_{ab}|$, and set
+\[
+ \delta_j=\tfrac12\bigl(M_B|L_jL_j^T-L_*L_*^T|_1
+                  +M_C|H_jH_j^T-H_*H_*^T|_1\bigr).
+\]
+For any symmetric $S$, compatible matrix $F$ and vector $x$, putting
+$y=F^Tx$ gives
+\[
+ |x^TFSF^Tx|
+ \le\sum_{a,b}|S_{ab}|\,|y_a|\,|y_b|
+ \le |S|_1\norm F_F^2|x|^2.
+\]
+Consequently $FSF^T\preceq |S|_1\norm F_F^2I_n$. Apply this to the two
+Gram differences. The change in the quadratic constraint is bounded
+above by $\delta_jI_n$, uniformly on $Q$, so
+$(A-\delta_jI_n,B,C)$ is admissible at $(L_j,H_j)$. Matrix convergence
+implies $\delta_j\to0$.
+
+The corrected field has pairing
+\[
+ \int_Q A\cdot dG_j+\int_Q B\cdot dq_j+\int_Q C\cdot dR_j
+       -\delta_j\int_Q\tr(dG_j).
+\]
+Weak-star convergence makes the first three terms converge to the target
+pairing. It also makes the trace pairing converge, since it is a finite
+sum of coordinate pairings against the constant function $1$; thus the
+last term tends to zero. This step uses no positivity assumption on the
+limiting mass. The defining support inequality bounds the corrected
+pairing by $\J_{L_j,H_j}(\mu_j)$, so its limit is at most $\ell$.
+Every continuous target dual pairing is therefore at most $\ell$.
+Taking their supremum in \eqref{eq:continuousdual} proves
+$\J_{L_*,H_*}(\mu)\le\ell$, including the assertion that a finite
+lower limit cannot coexist with infinite target action.
+\end{proof}
+
+\begin{lemma}[Relative Gram comparison]\label{lem:comparison}
+If $\alpha>0$ and
+\begin{equation}\label{eq:relative}
+ LL^T\succeq\alpha L_*L_*^T,
+ \qquad HH^T\succeq\alpha H_*H_*^T,
+\end{equation}
+then for every path $\mu$,
+\begin{equation}\label{eq:comparison}
+ \J_{L,H}(\mu)\le\alpha^{-1}\J_{L_*,H_*}(\mu).
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $(A,B,C)\in\Oset_{L,H}$, the target slack of
+$(\alpha A,\alpha B,\alpha C)$ is
+\[
+ \alpha\bigl(-A-\tfrac12BLL^TB^T-\tfrac12CHH^TC^T\bigr)
+ +\tfrac\alpha2 B(LL^T-\alpha L_*L_*^T)B^T
+ +\tfrac\alpha2 C(HH^T-\alpha H_*H_*^T)C^T.
+\]
+Each term is PSD, so multiplication by $\alpha$ sends the current dual
+set into the target dual set and multiplies its pairing by $\alpha$.
+Taking support suprema and integrating proves \eqref{eq:comparison},
+including infinite actions.
+\end{proof}

@@ -1,0 +1,20 @@
+\section{Formal verification and reproducibility}\label{sec:verification}
+The ancillary materials contain Lean formalizations of
+Theorems~\ref{thm:finite}, \ref{thm:ray}, \ref{thm:uniform},
+\ref{thm:hub} and~\ref{thm:separation},
+Propositions~\ref{prop:reactionrotation}--\ref{prop:operator}, and the
+supporting path constructions. They use signed Radon measures, the complete
+closed-domain $C^1$ test class and the normalization in \eqref{eq:action}.
+The accompanying source inventory and verification manifests identify
+the proof files by their hashes.
+The pinned toolchain is Lean~4.34.0-rc2; its mathlib revision and the checker
+versions are specified in the accompanying manifests.
+The recorded kernel certificate contains the Lean trust-level-zero check
+and the independent Nanoda check of the exported declarations and their
+complete dependency closures, with \texttt{propext}, \texttt{Classical.choice}
+and \texttt{Quot.sound} as the permitted axioms.
+
+The ancillary statement map connects the manuscript results to exact
+declaration types and source hashes. The numerical code, figure inputs,
+recorded outputs and reconstruction instructions are included in the same
+ancillary directory.

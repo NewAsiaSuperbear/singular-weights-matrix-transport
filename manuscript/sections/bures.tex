@@ -1,0 +1,310 @@
+\section{Entrywise divergence and the Bures value}\label{sec:bures}
+In this section $k=nd$, and $q=(Q_1,\ldots,Q_d)$ is the horizontal
+concatenation of $n\times n$ matrix-valued measure blocks. We use
+$D^*\Phi=(\partial_1\Phi,\ldots,\partial_d\Phi)$.
+The continuity equation remains the weak formulation \eqref{eq:ce}.
+For smooth admissible densities with $F=(F_1,\ldots,F_d)$, the block
+divergence and continuity equation are
+\[
+ (\operatorname{Div}F)_{ij}
+   =\sum_{a=1}^d\partial_a(F_a)_{ij},\qquad
+ \partial_tM+\sum_{a=1}^d\partial_a\sym F_a=\sym Z.
+\]
+The second identity is the density form of \eqref{eq:ce} in the interior.
+For an $n\times d$ matrix field $\Phi$, row divergence instead means
+$(\operatorname{div}\Phi)_i=\sum_{a=1}^d\partial_a\Phi_{ia}$;
+it is the test-side operator used in the Kantorovich--Bures examples.
+Every spatially constant symmetric test is annihilated by $D^*$, a property
+stronger than $D^*I_n=0$. Fix $H\in\Spp^n$.
+
+For PSD matrices define the usual Bures--Wasserstein expression
+\[
+ d_B^2(X,Y)=\tr X+\tr Y-2\tr\sqrt{X^{1/2}YX^{1/2}}.
+\]
+This expression and the orthogonal Procrustes characterization are established
+matrix geometry \cite{BhatiaJainLim}. Weighted reaction congruence is already
+present in \cite[Remark 3.11]{LiZou} and is related to \cite{HanEtAl}.
+
+\begin{lemma}[Pure reaction with PSD endpoints]\label{lem:pure}
+Let $\sigma$ be a probability Radon measure on $\Omega$ and
+$A_0,A_1\succeq0$. For endpoints $A_0\sigma,A_1\sigma$, the minimum
+of the original action over admissible paths with $q=0$ equals
+\begin{equation}\label{eq:buresvalue}
+ E_H(A_0,A_1)=2d_B^2(H^{-1}A_0H^{-1},H^{-1}A_1H^{-1}).
+\end{equation}
+The matrices $A_i$ may be singular, and the minimum is attained.
+\end{lemma}
+\begin{proof}
+Write $X_i=H^{-1}A_iH^{-1}$. Choose factors $P_iP_i^T=X_i$ with
+$P_0=X_0^{1/2}$ and $\norm{P_1-P_0}_F^2=d_B^2(X_0,X_1)$.
+Here is an explicit construction covering singular endpoints. For $\delta>0$ put
+\[
+ S_\delta=(X_0+\delta I)^{1/2},\qquad
+ K_\delta=(S_\delta X_1S_\delta)^{1/2},\qquad
+ P_\delta=S_\delta^{-1}K_\delta.
+\]
+Then $P_\delta P_\delta^T=S_\delta^{-1}K_\delta^2S_\delta^{-1}=X_1$
+and $\tr(S_\delta P_\delta)=\tr K_\delta$. In particular
+$\norm{P_\delta}_F^2=\tr X_1$, so finite-dimensional compactness supplies
+a convergent subsequence as $\delta\downarrow0$; denote its limit by $P_1$.
+The PSD square-root map is continuous: for a convergent sequence of PSD
+matrices its square roots are bounded, and every subsequential limit is PSD
+and squares to the limiting matrix, whose PSD square root is unique.
+Consequently the factor and trace identities pass to the limit, giving
+\[
+ P_1P_1^T=X_1,\qquad
+ \tr(P_0P_1)=\tr\bigl((X_0^{1/2}X_1X_0^{1/2})^{1/2}\bigr).
+\]
+Expanding
+$\norm{P_1-P_0}_F^2=\tr X_1+\tr X_0-2\tr(P_0P_1)$ proves the required
+identity and the nonnegativity of $d_B^2$.
+
+Put $\Delta=P_1-P_0$, $P_s=P_0+s\Delta$, and
+\[
+ M_s=HP_sP_s^TH,\qquad Z_s=2HP_s\Delta^TH.
+\]
+Differentiation gives
+$\dot M_s=H(\Delta P_s^T+P_s\Delta^T)H=\sym Z_s$. The path
+$(M_s\,ds\otimes\sigma,0,Z_s\,ds\otimes\sigma)$ has endpoints
+$A_i\sigma$ and satisfies the original weak equation. Symmetric tests pair
+with $Z_s$ through $\sym Z_s$. For interior $x$, the product rule and time
+fundamental theorem applied to $\Phi(s,x)\cdot M_s$ give the endpoint
+identity. For $x\in\partial\Omega$, choose interior points $x_m\to x$,
+possible because $\Omega$ is the closure of its interior. Uniform continuity
+of $\Phi$ and $\partial_s\Phi$ on compact $Q$ gives uniform convergence
+in $s$ along these points. Since $M_s$ and $\dot M_s$ are bounded, the
+interior identity passes to the limit. Integrating this identity in the
+finite measure $\sigma$ proves \eqref{eq:ce} also for boundary-supported
+$\sigma$.
+For an admissible dual triple $(A,B,C)$, the nonnegative transport Gram
+term may be dropped after pairing its constraint with $M_s$. With
+$Y=(CH)^THP_s$, cyclicity of trace gives
+$\tr(CH^2C^TM_s)=\norm Y_F^2$ and $C\cdot Z_s=2\ip Y\Delta$.
+Thus
+\[
+ A\cdot M_s+C\cdot Z_s
+ \le-\tfrac12\norm Y_F^2+2\ip Y\Delta
+ =2\norm\Delta_F^2-\tfrac12\norm{Y-2\Delta}_F^2
+ \le2\norm\Delta_F^2.
+\]
+Integrating against $ds\otimes\sigma$ and taking the continuous-dual
+supremum in \eqref{eq:continuousdual} proves that this path has
+pure-reaction action at most $2d_B^2(X_0,X_1)$. The estimate applies even
+where $M_s$ is singular.
+
+For the matching lower bound, regularize both endpoints and set
+\[
+ S_\delta=(X_0+\delta I)^{1/2},\qquad
+ T_\delta=S_\delta^{-1}
+   [S_\delta(X_1+\delta I)S_\delta]^{1/2}S_\delta^{-1}.
+\]
+The symmetric matrix $T_\delta$ is positive definite. Thus
+$N_s=(1-s)I+sT_\delta$ is invertible for $s\in[0,1]$, and
+\[
+ \Psi_s=2(T_\delta-I)N_s^{-1},\qquad
+ \Phi_s=H^{-1}\Psi_sH^{-1}
+\]
+are time-dependent symmetric tests. Indeed, $N_s$ is a polynomial in
+$T_\delta$, so $N_s^{-1}$ commutes with $T_\delta-I$. Differentiating
+$N_sN_s^{-1}=I$ yields
+\[
+ \dot\Psi_s=-2(T_\delta-I)N_s^{-1}(T_\delta-I)N_s^{-1}
+            =-\tfrac12\Psi_s^2.
+\]
+Since $H^{-1}H^2H^{-1}=I$, congruence by $H^{-1}$ gives
+$\dot\Phi_s+\Phi_sH^2\Phi_s/2=0$. Hence
+$(\dot\Phi_s,0,\Phi_s)$ satisfies the dual constraint. The original weak
+equation and the defining support inequality bound every pure-reaction
+competitor below by $\Phi_1\cdot A_1-\Phi_0\cdot A_0$; the spatial
+integrals reduce to these pairings because $\sigma(\Omega)=1$.
+Write $\widehat K_\delta=[S_\delta(X_1+\delta I)S_\delta]^{1/2}$ and
+$c_\delta=\tr\widehat K_\delta$. Direct multiplication gives
+\[
+ T_\delta S_\delta^2T_\delta
+ =S_\delta^{-1}\widehat K_\delta^2S_\delta^{-1}=X_1+\delta I,
+ \qquad \tr(T_\delta S_\delta^2)=\tr\widehat K_\delta=c_\delta.
+\]
+Also $T_\delta^{-1}(X_1+\delta I)=S_\delta^2T_\delta$, whose trace is
+$c_\delta$. Subtracting the regularization terms therefore gives
+\[
+ \tr(T_\delta X_0)=c_\delta-\delta\tr T_\delta,
+ \qquad
+ \tr(T_\delta^{-1}X_1)=c_\delta-\delta\tr T_\delta^{-1}.
+\]
+Since $\Psi_0=2(T_\delta-I)$ and
+$\Psi_1=2(I-T_\delta^{-1})$, the endpoint pairing is the sum of
+\[
+ 2\{\tr X_0+\tr X_1-
+   2\tr\bigl([S_\delta(X_1+\delta I)S_\delta]^{1/2}\bigr)\}
+\]
+and $2\delta\tr(T_\delta+T_\delta^{-1})\ge0$.
+Drop this nonnegative second term before passing to the limit. The first
+term converges to $2d_B^2(X_0,X_1)$ by continuity of the PSD square root,
+so every competitor has at least that action. This proves the lower bound,
+including singular endpoints. The same space-constant certificate gives the lower bound for
+any original transport problem whose operator annihilates all spatially
+constant symmetric fields.
+\end{proof}
+
+\paragraph{A noncommuting inflation example.}
+We compare the inflation expression in
+\cite[Proposition 4.4, equation (4.12)]{LiZou} with the variational value
+for the following noncommuting pair. Take
+$x_0\in\operatorname{int}\Omega$, $e=(1,0)^T$, $v=(1,1)^T/\sqrt2$,
+$P_0=ee^T$, $P_1=vv^T$, and $H=I_2$.
+For $\mathsf G=I_2\delta_{x_0}$, the inflated endpoints
+$\mathsf G^{P_i}:=P_i\mathsf G P_i$ equal $P_i\delta_{x_0}$.
+For these endpoints, that expression equals $2\tr((P_1-P_0)^2)=2$.
+Put $w=v-e$ and $u_s=e+sw$. Since
+$|u_s|^2=1-(2-\sqrt2)s(1-s)>0$, the zero-flux path with mass
+$u_su_s^T\,ds\otimes\delta_{x_0}$ and reaction
+$2u_sw^T\,ds\otimes\delta_{x_0}$ is admissible:
+$\partial_s(u_su_s^T)=\sym(2u_sw^T)$.
+Its local support cost is
+\[
+ j_{L,I_2}(u_su_s^T,0,2u_sw^T)
+ =\sup_C\left\{2w\cdot C^Tu_s-\tfrac12|C^Tu_s|^2\right\}
+ =2|w|^2=4-2\sqrt2<2.
+\]
+Indeed, the maximizing choice of the mass dual variable saturates its
+constraint, the transport dual variable can be set to zero, and
+$C^Tu_s$ ranges over $\R^2$.
+For entrywise divergence, Lemma~\ref{lem:pure} and its space-constant
+lower certificate give the exact minimum
+$2d_B^2(P_0,P_1)=4-2\sqrt2<2$.
+
+\begin{theorem}[Radon hub recovery]\label{thm:hub}
+Suppose $\Omega$ is convex, choose $x_*\in\operatorname{int}\Omega$, and
+put $A_i=G_i(\Omega)$,
+\[
+ M_i=\int_\Omega|x-x_*|^2\,d\tr G_i(x),\qquad
+ B=(\sqrt{M_0}+\sqrt{M_1})/\sqrt2.
+\]
+For arbitrary finite PSD Radon endpoints and every $t>0$,
+\begin{equation}\label{eq:hub}
+ E_H(A_0,A_1)\le V(tI_{nd},H)
+ \le\bigl(\sqrt{E_H(A_0,A_1)}+B/t\bigr)^2.
+\end{equation}
+Consequently $W(I_{nd},H)=E_H(A_0,A_1)$. For SPD $L$ with
+$L^2\succeq m^2I_{nd}$, $m>0$, the same bound holds with $t$ replaced by $m$.
+\end{theorem}
+\begin{proof}
+Throughout this proof abbreviate $E_H:=E_H(A_0,A_1)$.
+The space-constant certificates in Lemma~\ref{lem:pure} are admissible
+for entrywise divergence. They bound every original competitor below by
+$E_H(A_0,A_1)$, since their endpoint pairings depend only on the total
+matrices $A_i$. This proves the lower bound.
+
+For the upper bound, we contract the endpoints to a common hub and
+connect their total matrices there by pure reaction. For a single endpoint
+$G$, take for $\lambda$ the sum of its coordinate total variations and
+write $G=N\lambda$. Since
+$G^{ab}=G^{ba}$, uniqueness of Radon--Nikodym derivatives gives
+$N=N^T$ almost everywhere. For each vector $v$ in a countable dense subset
+of $\R^n$, positivity of the scalar measure $v^TGv$ implies
+$v^TNv\ge0$ almost everywhere. Removing the union of these countably many
+null sets and using continuity in $v$ gives $N\succeq0$ almost everywhere.
+Define $F_s(x)=(1-s)x+sx_*$, $v(x)=x_*-x$, and
+$\mathcal F(s,x)=(s,F_s(x))$. The contracted measures are exactly
+\[
+ \widehat G=\mathcal F_\#(N\,ds\,d\lambda),\qquad
+ \widehat Q_\ell=\mathcal F_\#(v_\ell N\,ds\,d\lambda),\qquad
+ \widehat R=0.
+\]
+Their coordinates are finite signed Radon measures: $v$ is bounded on
+compact $\Omega$, every coordinate of $N$ is integrable, and continuous
+pushforward preserves finiteness and the Radon property on compact spaces.
+For a closed-domain test $\Phi$, the time derivative of
+$\Phi(s,F_s(x))$ is
+$\partial_s\Phi+\sum_\ell v_\ell\partial_\ell\Phi$ at $(s,F_s(x))$.
+To justify this also when $x\in\partial\Omega$, choose
+$B(x_*,r)\subset\operatorname{int}\Omega$. Convexity gives
+$B(F_s(x),sr)\subset\Omega$ for $s>0$, so the ordinary chain rule applies
+there; the continuous extensions of the derivatives make it valid in the
+interval fundamental theorem down to $s=0$. Pairing with $N$ and integrating
+therefore gives
+\[
+ \int_Q\partial_s\Phi\cdot d\widehat G+
+          \sum_\ell\partial_\ell\Phi\cdot d\widehat Q_\ell
+ =\int_\Omega[\Phi(1,x_*)-\Phi(0,x)]\cdot N(x)\,d\lambda(x).
+\]
+Fubini is applicable because the derivatives and $v$ are bounded and
+$\tr N$ is integrable. This is precisely \eqref{eq:ce} from $G$ to
+$G(\Omega)\delta_{x_*}$, including boundary atoms.
+
+To bound the pre-pushforward cost, factor $N=SS^T$. For an admissible
+dual triple $(A,(B_\ell)_\ell,C)$, dropping the reaction Gram term and
+completing the square give
+\[
+ A\cdot N+\sum_\ell B_\ell\cdot(v_\ell N)
+ \le\sum_\ell\left(-\frac{t^2}{2}\norm{B_\ell^TS}_F^2
+       +v_\ell\ip{S}{B_\ell^TS}\right)
+ \le\frac{|v|^2\tr N}{2t^2}.
+\]
+Here $\ip{S}{B_\ell^TS}=B_\ell\cdot N$ and
+$\norm S_F^2=\tr N$, so the second inequality is the scalar-vector square
+completion with maximizing value $v_\ell^2\norm S_F^2/(2t^2)$.
+Lemma~\ref{lem:scaling} permits integration against $ds\otimes\lambda$.
+For completeness, if $(A,B,C)$ is any continuous admissible field on the
+image space, its composition with $\mathcal F$ is a continuous admissible
+field on the source: the dual constraint depends only on its values and
+on the fixed weights. The signed pushforward identity gives, for example,
+\[
+ \int_Q A\cdot d\widehat G+\sum_\ell B_\ell\cdot d\widehat Q_\ell
+ =\int_Q\left[(A\circ\mathcal F)\cdot N+
+      \sum_\ell(B_\ell\circ\mathcal F)\cdot v_\ell N\right]ds\,d\lambda.
+\]
+The preceding pointwise bound and \eqref{eq:continuousdual} show that the
+contraction cost is at most $M_G/(2t^2)$, where
+$M_G=\int|x-x_*|^2d\tr G$. This argument also covers collisions of distinct
+source points at the hub.
+For expansion, run the curve backwards and reverse the flux. The cost is
+unchanged, since the dual constraint is invariant under $B\mapsto-B$.
+
+We use the time-rescaling rule of \cite[Lemma 3.15]{LiZou} to concatenate
+these paths, with its measure-level form written explicitly below.
+For a unit-time piece $\mu=(G,q,R)$ and an interval $[a,a+r]$ of length
+$r>0$, let $\Theta(s,x)=(a+rs,x)$ and set
+\[
+ G'=r\Theta_\#G,\qquad q'=\Theta_\#q,\qquad R'=\Theta_\#R.
+\]
+For a closed-domain test $\Phi$, $\Psi=\Phi\circ\Theta$ satisfies
+$\partial_s\Psi=r(\partial_t\Phi)\circ\Theta$ and
+$D^*\Psi=(D^*\Phi)\circ\Theta$. Substitution in the original equation
+proves the compressed weak equation with the same spatial endpoints at
+times $a,a+r$. If $(g,z,\zeta)$ are densities of $\mu$ with respect to
+$\rho$, the densities of the compressed path with respect to
+$\Theta_\#\rho$ are $(rg,z,\zeta)\circ\Theta^{-1}$. Reference-measure
+independence and \eqref{eq:quadratic-scaling} give the exact identity
+\[
+ \J_{tI,H}(G',q',R')
+ =\int j_{tI,H}(rg,z,\zeta)\,d\rho
+ =r^{-1}\J_{tI,H}(G,q,R).
+\]
+
+Apply this operation to the first contraction, the pure-reaction path at
+the hub with $\sigma=\delta_{x_*}$, and the second expansion, using
+consecutive intervals of lengths $r_0,r_1,r_2>0$ summing to one. Each piece
+has a Lebesgue factor in time and hence assigns zero to its endpoint slices.
+Their coordinate sums therefore have no duplicated junction mass. Summing
+the three weak equations cancels their two internal endpoint pairings and
+gives \eqref{eq:ce}. Off the junction slices the measures have disjoint
+time supports, so reference-measure independence makes the action of the
+sum the sum of the piece actions. Consequently the action is at most
+\[
+ \frac{M_0}{2t^2r_0}+\frac{E_H}{r_1}+\frac{M_1}{2t^2r_2}.
+\]
+For the three nonnegative costs
+$(c_0,c_1,c_2)=(M_0/(2t^2),E_H,M_1/(2t^2))$, Cauchy--Schwarz gives
+$(\sum_i\sqrt{c_i})^2\le(\sum_i c_i/r_i)(\sum_i r_i)$.
+Thus the infimum over positive durations summing to one is
+$(\sqrt{E_H}+B/t)^2$. If all three costs are positive, it is attained by
+durations proportional to their square roots; if some, but not all, vanish,
+it is approached by positive durations whose zero-cost components tend to
+zero; if all three vanish, every such choice gives zero. Taking infima gives the upper bound. Along $t\to\infty$, the two bounds
+force $V(tI_{nd},H)\to E_H$. The fixed-ray limit in
+Theorem~\ref{thm:ray} identifies the same limit as $W(I_{nd},H)$.
+For the general SPD bound, $LL^T\succeq m^2I_{nd}$ and the unchanged
+reaction Gram imply $\J_{L,H}\le\J_{mI,H}$ by the support-set
+comparison with $\alpha=1$.
+\end{proof}

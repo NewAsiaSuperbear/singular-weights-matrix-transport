@@ -1,0 +1,9 @@
+[
+  {
+    "name": "MatrixTransport.ReactionZero.SelectorApproximation.finiteSelector._unsafe_rec",
+    "kind": "definition",
+    "unsafe": false,
+    "partial": true,
+    "reason": "Compiler-generated partial implementation helper; not a mathematical declaration."
+  }
+]

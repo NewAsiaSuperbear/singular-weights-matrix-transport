@@ -1,0 +1,88 @@
+{
+  "all_quality_passed": true,
+  "analytic_reference": {
+    "float64_spectral_reference": "retained diagnostic with separate pass flag",
+    "method": "2-by-2 trace-square-root Bures formula; inverse and congruences from Decimal.from_float inputs",
+    "precision_decimal_digits": 60,
+    "relative_tolerance": 1e-07
+  },
+  "complete": true,
+  "duration_seconds": 2.466058216001329,
+  "experiment": "matrix-transport-consolidated-validation",
+  "finished_utc": "2026-10-07T10:12:00.831278+00:00",
+  "git": {
+    "branch": "main",
+    "commit": "c7d7f6657aaf26333329cfcd2d0232636c61df47",
+    "dirty": false,
+    "repository_detected": true
+  },
+  "git_after": {
+    "branch": "main",
+    "commit": "c7d7f6657aaf26333329cfcd2d0232636c61df47",
+    "dirty": false,
+    "repository_detected": true
+  },
+  "hub": {
+    "B_squared": 0.3333333333333333,
+    "E_H": 0.0,
+    "M0": 0.16666666666666666,
+    "M1": 0.16666666666666666,
+    "location": 0.5
+  },
+  "meshes": [
+    8,
+    16,
+    32
+  ],
+  "mlflow_run_id": "3bf9f0c90b5e4486aa19dda1339a4dfb",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+  "profile_nt": 16,
+  "profile_nx": 4,
+  "public_provenance_export": {
+    "changed_fields": [],
+    "explanation": "Derived public export; original records remain archived privately. Machine paths, internal tracking addresses and raw Git status are omitted. Portable commands are reproduction instructions and were not executed by this export. Unverified formula-authorship wording is rendered as analytic formulas. Historical commits, dirty flags, versions, seeds, configuration, source hashes, numerical results and diagnostics are retained.",
+    "original_sha256": "7c482593a0498736b6f49280a9781facd7c662704f9990b2985666149a052a19",
+    "portable_command_executed_by_export": false,
+    "removed_fields": [
+      "/git/status_porcelain",
+      "/git_after/status_porcelain"
+    ],
+    "schema_version": 1
+  },
+  "python": "3.12.13",
+  "seed": 921,
+  "solver_case_requests": 13,
+  "solver_max_iter": 300,
+  "solver_tolerance": 1e-09,
+  "source_sha256": {
+    "numerical/rotating-reaction/numerical/rotating_family.py": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+    "numerical/validation/README.md": "0773f6838f65341cd7161a3564741bc67c592736c3a36e2d4427c50abf4b7583",
+    "numerical/validation/experiments.py": "59cebda51a6bcce2fdcda59086ab36c185182c64092e916ca58e6722ceba8abe",
+    "numerical/validation/requirements.txt": "b71718826f7ba0832c48656c2b1dade13b7204482f3f4b4f51f09a080229ae1a",
+    "numerical/validation/solver.py": "7af5b452e2401acaa252d564d7b27c3bf5d390acb81b1e25b620e8911f697b33",
+    "numerical/validation/tests/test_experiments.py": "7c278e575ac53eb247f6d69589573555d999064f68218bde779e40276867daa0",
+    "numerical/validation/tests/test_tracking.py": "187d520b3c57fdf9960ba24f1caa7c8c72d8868352f4f97c7539fb6804bace47",
+    "numerical/validation/tests/test_weights.py": "4b9f9cccaa79a6b9d00fdfe818a9a64210160c0b32dc195cdac54d6e6295283c"
+  },
+  "source_sha256_after": {
+    "numerical/rotating-reaction/numerical/rotating_family.py": "0fa0d4e438b65c22b56c92c19270255cf3d84aeb37c3b014c9b0732ac807fe93",
+    "numerical/validation/README.md": "0773f6838f65341cd7161a3564741bc67c592736c3a36e2d4427c50abf4b7583",
+    "numerical/validation/experiments.py": "59cebda51a6bcce2fdcda59086ab36c185182c64092e916ca58e6722ceba8abe",
+    "numerical/validation/requirements.txt": "b71718826f7ba0832c48656c2b1dade13b7204482f3f4b4f51f09a080229ae1a",
+    "numerical/validation/solver.py": "7af5b452e2401acaa252d564d7b27c3bf5d390acb81b1e25b620e8911f697b33",
+    "numerical/validation/tests/test_experiments.py": "7c278e575ac53eb247f6d69589573555d999064f68218bde779e40276867daa0",
+    "numerical/validation/tests/test_tracking.py": "187d520b3c57fdf9960ba24f1caa7c8c72d8868352f4f97c7539fb6804bace47",
+    "numerical/validation/tests/test_weights.py": "4b9f9cccaa79a6b9d00fdfe818a9a64210160c0b32dc195cdac54d6e6295283c"
+  },
+  "source_unchanged": true,
+  "started_utc": "2026-10-07T10:11:58.365947+00:00",
+  "stochastic": false,
+  "theory_comparison": "SDP grid values are discretizations; signed bound differences are recorded, not formal certificates",
+  "unique_solver_calls": 12,
+  "versions": {
+    "clarabel": "0.11.1",
+    "cvxpy": "1.7.2",
+    "numpy": "2.2.6",
+    "scipy": "1.18.1"
+  }
+}

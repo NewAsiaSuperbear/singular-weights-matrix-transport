@@ -1,0 +1,8 @@
+{
+  "project": "bowen-li-matrix-transport",
+  "seed_label": "0921",
+  "seed_integer": 921,
+  "rng": "numpy.random.default_rng (PCG64)",
+  "deterministic_quadrature": true,
+  "randomized_component": "Six fixed low-frequency continuous test functions, shared across all oscillation frequencies and quadrature levels."
+}

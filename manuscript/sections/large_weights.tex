@@ -1,0 +1,118 @@
+\section{Large transport weights}\label{sec:large}
+The large-transport regimes below keep the reaction weight fixed.
+
+Define the reaction-channel action by
+\[
+ F_H(\mu)=\int_Qj_{L,H}(g,0,r)\,d\rho_\mu.
+\]
+At zero flux density, deleting $B$ from an admissible dual triple preserves
+feasibility and leaves its pairing unchanged. Conversely, every admissible
+triple with $B=0$ belongs to the full dual set. Thus the support supremum
+at $(g,0,r)$ equals its supremum over the $B=0$ slice, which is independent
+of $L$. This also proves $F_H(\mu)\le\J_{L,H}(\mu)$, because the same
+slice is available when the flux density is nonzero.
+Lemma~\ref{lem:scaling} justifies computing $F_H$ using $\rho_\mu$.
+It retains the mass and reaction range constraints, while $\mu$ still
+satisfies the continuity equation with its full flux $q$. For a fixed
+baseline transport weight put
+\begin{equation}\label{eq:freevalue}
+ W(L,H)=\inf\{F_H(\mu):\mu\in\CE,\ \J_{L,H}(\mu)<\infty\}.
+\end{equation}
+The finite-baseline requirement retains the transport range and
+integrability constraints of the original problem.
+
+\begin{lemma}[Ray recovery and finite-domain preservation]\label{lem:ray}
+For $t\ge1$ and every finite-baseline path,
+\begin{equation}\label{eq:raysandwich}
+ F_H(\mu)\le\J_{tL,H}(\mu)
+ \le F_H(\mu)+t^{-1}\J_{L,H}(\mu),
+ \qquad\J_{L,H}(\mu)\le t^2\J_{tL,H}(\mu).
+\end{equation}
+In particular the baseline and current finite-action classes coincide.
+\end{lemma}
+\begin{proof}
+Write $v=(g,z,r)$ and $v_s=(g,sz,r)$. The dual substitution $B\mapsto tB$
+gives $j_{tL,H}(v)=j_{L,H}(v_{1/t})$. If $(A,B,C)$ is admissible, then
+$(A,0,C)$ is also admissible and has the same pairing with $(g,0,r)$.
+Taking support suprema therefore gives
+$j_{L,H}(g,0,r)\le j_{L,H}(v_{1/t})$.
+Convexity gives
+\[
+ j_{L,H}(v_{1/t})\le(1-t^{-1})j_{L,H}(g,0,r)+t^{-1}j_{L,H}(v)
+ \le j_{L,H}(g,0,r)+t^{-1}j_{L,H}(v).
+\]
+Integrating against $\rho_\mu$ proves the first two inequalities in
+\eqref{eq:raysandwich}.
+
+For the last inequality, apply Lemma~\ref{lem:comparison} with the
+baseline weights as the current weights, the weights $(tL,H)$ as the
+target, and $\alpha=t^{-2}$. The transport comparison is equality and
+the reaction comparison follows from $t\ge1$. This gives
+$\J_{L,H}(\mu)\le t^2\J_{tL,H}(\mu)$ for every path $\mu$. Hence finite current action
+implies finite baseline action. Conversely, the first two inequalities,
+together with $F_H\le\J_{L,H}$, show that finite baseline action implies
+finite current action.
+\end{proof}
+
+\begin{theorem}[Fixed ray, including singular rays]\label{thm:ray}
+For any fixed $L,H$ and $0<t_j\to+\infty$,
+\[
+ V(t_jL,H)\longrightarrow W(L,H)
+\]
+in the extended nonnegative reals.
+\end{theorem}
+\begin{proof}
+Eventually the finite-action class is the baseline class. Every current
+action on this class dominates $F_H$, giving $V(t_jL,H)\ge W(L,H)$.
+If $W(L,H)<\infty$, for each $\varepsilon>0$ choose a finite-baseline
+competitor $\mu_\varepsilon$ with
+$F_H(\mu_\varepsilon)\le W(L,H)+\varepsilon$, as permitted by the
+definition of infimum. Keeping this path fixed, \eqref{eq:raysandwich} gives
+\[
+ \limsup_j V(t_jL,H)\le F_H(\mu_\varepsilon)
+       +\lim_j t_j^{-1}\J_{L,H}(\mu_\varepsilon)
+ \le W(L,H)+\varepsilon.
+\]
+Its baseline action is a finite constant; taking $\varepsilon\downarrow0$
+therefore gives the upper bound. If the target is infinite, the lower bound is
+already conclusive.
+\end{proof}
+
+\begin{theorem}[Uniform divergence in every direction]\label{thm:uniform}
+Suppose $t_j\to+\infty$ and eventually $L_jL_j^T\succeq t_j^2I_k$.
+Then
+\[
+ V(L_j,H)\longrightarrow W(I_k,H).
+\]
+For admissible vanishing-gap near-minimizers, their actions converge to this
+extended target. If the target is finite, their reaction-channel actions
+also converge to it.
+\end{theorem}
+\begin{proof}
+For each $j$, the Gram bound
+$L_jL_j^T\preceq(1+\norm{L_j}_F^2)I_k$ permits
+Lemma~\ref{lem:comparison} with factor $(1+\norm{L_j}_F^2)^{-1}$,
+giving
+\[
+ \J_{I_k,H}(\mu)\le(1+\norm{L_j}_F^2)\J_{L_j,H}(\mu).
+\]
+Thus finite current action implies finite identity-baseline action.
+The comparison constant may depend on $j$, since this step concerns
+finiteness at each index. Conversely, eventually $t_j\ge1$ and
+$\J_{L_j,H}(\mu)\le\J_{t_jI_k,H}(\mu)$ by the assumed Gram
+domination. Lemma~\ref{lem:ray} makes the latter finite on the
+identity-baseline class. The two finite-action classes therefore coincide
+eventually.
+
+For a fixed baseline path,
+\[
+ F_H(\mu)\le\J_{L_j,H}(\mu)\le\J_{t_jI_k,H}(\mu)\to F_H(\mu).
+\]
+The infimum argument of Theorem~\ref{thm:ray} now gives the value limit.
+Squeezing between the minimum values and their vanishing-gap upper bounds
+proves near-minimizer action convergence. At finite target these actions
+are eventually finite, so the same paths have finite baseline action.
+Consequently
+$W(I_k,H)\le F_H(\mu_j)\le\J_{L_j,H}(\mu_j)$, which proves the
+reaction-channel action convergence.
+\end{proof}

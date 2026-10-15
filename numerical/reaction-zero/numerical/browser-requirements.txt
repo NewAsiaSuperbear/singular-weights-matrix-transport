@@ -1,0 +1,2 @@
+# Optional real-browser checks; not needed to open the offline HTML.
+playwright==1.55.0
